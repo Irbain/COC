@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id  String @id @default(auto()) @map("_id") @db.ObjectId
+  lang String?
+  title String?
+  description  String?
+  buttons Json?
+  labels Json?
+  h1 Json?
+  radio Json?
+  section Json?
+  footer Json?
+  other Json?
+  errors Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// model cpa {
+//   id  String @id @default(auto()) @map("_id") @db.ObjectId
+//   platform String
+//   offers String @unique
+//   lead String
+// }
+
+// each time you update the schema 
+// npx prisma generate
+// npx prisma bd push
