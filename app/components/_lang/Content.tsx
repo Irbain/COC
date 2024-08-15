@@ -38,7 +38,11 @@ interface dataObject {
   description: string;
   buttons?: any; // Specify a more appropriate type if known
   labels?: any; // Specify a more appropriate type if known
-  h1?: any;
+  h1: {
+    one: string;
+    two: string;
+    three: string;
+  };
   radio: {
     card: {
       first: { amount: string; title: string };
@@ -46,8 +50,9 @@ interface dataObject {
       third: { amount: string; title: string };
     };
     device: {
-      ios: String;
-      android: String;
+      ios: string;
+      android: string;
+      other: string;
     };
   };
   section: {
@@ -94,13 +99,23 @@ interface dataObject {
       two: "";
     };
   };
-  other: {};
+  other: {
+    nav: string;
+    cta: {
+      selectgift: string;
+    };
+    title: {
+      agreement: string;
+    };
+  };
   errors: {
-    input: { name: string };
+    input: { name: string; shortname: string; terms: string; device: string };
     email: {
       invalid: "";
       required: "";
     };
+    gems: string;
+    verification: string;
   };
 }
 
@@ -119,7 +134,11 @@ export default function Home({ currentLang }: HomeProps) {
     description: "string",
     buttons: "any", // Specify a more appropriate type if known
     labels: "any", // Specify a more appropriate type if known
-    h1: "any",
+    h1: {
+      one: "",
+      two: "",
+      three: "",
+    },
     radio: {
       card: {
         first: { amount: "", title: "" },
@@ -129,6 +148,7 @@ export default function Home({ currentLang }: HomeProps) {
       device: {
         ios: "IOS",
         android: "Android",
+        other: "",
       },
     },
     section: {
@@ -178,18 +198,20 @@ export default function Home({ currentLang }: HomeProps) {
     other: {
       nav: "nav",
       cta: {
-        selectgit: "",
+        selectgift: "",
       },
       title: {
         agreement: "",
       },
     },
     errors: {
-      input: { name: "" },
+      input: { name: "", shortname: "", terms: "", device: "" },
       email: {
         invalid: "",
         required: "",
       },
+      gems: "",
+      verification: "",
     },
   });
   const { langs, setLangs, getLang } = useLangStore();
@@ -270,7 +292,7 @@ export default function Home({ currentLang }: HomeProps) {
         <div>
           <Skroll
             scrolToRef={scrolToRef}
-            text={alldata.other.nav ?? "how it work"}
+            text={alldata?.other?.nav ?? "how it work"}
           />
           <div className="absolute top-0 left-0 right-0 w-screen h-screen z-1">
             {/* <Image
@@ -313,10 +335,10 @@ export default function Home({ currentLang }: HomeProps) {
                 className="drop-shadow-[1px_2px_0.1px_#000000]
               text-white bg-clip-text bg-gradient-to-r from-[#C47D3A] via-[#FEC06B] to-[#FFEE61]"
               >
-                {alldata.h1.one ?? ""}
+                {alldata?.h1?.one ?? ""}
               </h1>
               <MultiStepForm
-                buttonsTitles={alldata.buttons ?? {}}
+                buttonsTitles={alldata?.buttons ?? {}}
                 show={show}
                 initialValues={{
                   email: "",
@@ -335,12 +357,14 @@ export default function Home({ currentLang }: HomeProps) {
                 <FormStep
                   stepName="gems"
                   validationSchema={yup.object({
-                    gems: yup.string().required(`${alldata.errors.gems ?? ""}`),
+                    gems: yup
+                      .string()
+                      .required(`${alldata?.errors?.gems ?? ""}`),
                   })}
                 >
                   {/* <div>{data[0].name}</div> */}
                   <h2 className="text-sm absolute top-[22%] left-0 right-0 goldMask">
-                    {alldata.other.cta.selectgift ?? ""}
+                    {alldata?.other?.cta?.selectgift ?? ""}
                   </h2>
                   <div
                     className="mx-5 sm:mx-3 xs:mx-2 xxs:mx-0
@@ -358,8 +382,8 @@ export default function Home({ currentLang }: HomeProps) {
                           value="1200"
                         />
                         <GemCard
-                          amount={alldata.radio.card.first.amount ?? " "}
-                          text={alldata.radio.card.first.title ?? " "}
+                          amount={alldata?.radio?.card.first.amount ?? " "}
+                          text={alldata?.radio?.card.first.title ?? " "}
                           img="/pile_of_gems.png"
                           className=" peer-checked:bg-gold"
                           width={80}
@@ -376,8 +400,8 @@ export default function Home({ currentLang }: HomeProps) {
                           value="2500"
                         />
                         <GemCard
-                          amount={alldata.radio.card.second.amount ?? ""}
-                          text={alldata.radio.card.second.title ?? ""}
+                          amount={alldata?.radio?.card?.second?.amount ?? ""}
+                          text={alldata?.radio?.card?.second?.title ?? ""}
                           img="/sack_of_gems.png"
                           className="peer-checked:bg-gold"
                           width={80}
@@ -397,8 +421,8 @@ export default function Home({ currentLang }: HomeProps) {
                           value="6500"
                         />
                         <GemCard
-                          amount={alldata.radio.card.third.amount ?? ""}
-                          text={alldata.radio.card.third.title ?? ""}
+                          amount={alldata?.radio?.card?.third?.amount ?? ""}
+                          text={alldata?.radio?.card?.third?.title ?? ""}
                           img="/box_of_gems.png"
                           className="peer-checked:bg-gold"
                           width={80}
@@ -417,18 +441,18 @@ export default function Home({ currentLang }: HomeProps) {
                   validationSchema={yup.object({
                     input: yup
                       .string()
-                      .required(`${alldata.errors.input.name ?? "Name"}`)
+                      .required(`${alldata?.errors?.input?.name ?? "Name"}`)
                       .min(
                         3,
-                        `${alldata.errors.input.shortname ?? "Short Name"}`
+                        `${alldata?.errors?.input?.shortname ?? "Short Name"}`
                       ),
                     agreement: yup
                       .bool()
-                      .oneOf([true], `${alldata.errors.input.terms ?? ""}`)
+                      .oneOf([true], `${alldata?.errors?.input?.terms ?? ""}`)
                       .required(),
                     devices: yup
                       .string()
-                      .required(`${alldata.errors.input.device ?? ""}`),
+                      .required(`${alldata?.errors?.input?.device ?? ""}`),
                   })}
                 >
                   <div
@@ -437,7 +461,7 @@ export default function Home({ currentLang }: HomeProps) {
                   >
                     <label className="flex flex-col ">
                       <span className="align-super goldMask">
-                        {alldata.labels.name}
+                        {alldata?.labels?.name}
                       </span>
                       <InputField name="input" label="input" />
                     </label>
@@ -445,7 +469,7 @@ export default function Home({ currentLang }: HomeProps) {
                     {/* Devices */}
                     <div className="">
                       <label className="align-super goldMask">
-                        {alldata.labels.device}
+                        {alldata?.labels?.device}
                       </label>
                       <div className="flex justify-between items-center w-2/4 mx-auto">
                         <div className="flex items-center ">
@@ -457,7 +481,7 @@ export default function Home({ currentLang }: HomeProps) {
                               className={` cursor-pointer h-4 w-4 border-gray-300 align-text-top`}
                             />
                             <span className="ml-1">
-                              {alldata.radio.device.ios ?? ""}
+                              {alldata?.radio?.device.ios ?? ""}
                             </span>
                           </label>
                         </div>
@@ -474,7 +498,7 @@ export default function Home({ currentLang }: HomeProps) {
                               className={`cursor-pointer h-4 w-4 border-gray-300 align-text-top`}
                             />
                             <span className="ml-1">
-                              {alldata.radio.device.android ?? ""}
+                              {alldata?.radio?.device.android ?? ""}
                             </span>
                           </label>
                         </div>
@@ -489,7 +513,7 @@ export default function Home({ currentLang }: HomeProps) {
                             />
                             <span className="ml-1">
                               {/* {String.fromCharCode(65)}mine */}
-                              {alldata.radio.device.other ?? ""}
+                              {alldata?.radio?.device.other ?? ""}
                             </span>
                           </label>
                         </div>
@@ -506,7 +530,7 @@ export default function Home({ currentLang }: HomeProps) {
             drop-shadow-[0.5px_3px_0px_#303030] rounded align-text-top `}
                         />
                         <span className="ml-2 z-10">
-                          {alldata.other.title.agreement ?? ""}
+                          {alldata?.other?.title.agreement ?? ""}
                         </span>
                       </label>
                     </div>
@@ -521,11 +545,11 @@ export default function Home({ currentLang }: HomeProps) {
                   }}
                 >
                   <Verification
-                    wait={alldata.labels.wait ?? ""}
+                    wait={alldata?.labels.wait ?? ""}
                     setShow={setShow} // true must be edited based on the leads Array
                     show={show}
                     offers={offersRef.current}
-                    cta={alldata.errors.verification ?? ""}
+                    cta={alldata?.errors?.verification ?? ""}
                   />
                   {/* <Script src="/checkAdbLeads.js" /> */}
                 </FormStep>
@@ -539,19 +563,19 @@ export default function Home({ currentLang }: HomeProps) {
                   validationSchema={yup.object({
                     email: yup
                       .string()
-                      .email(`${alldata.errors.email.invalid ?? ""}`)
-                      .required(`${alldata.errors.email.required ?? ""}`),
+                      .email(`${alldata?.errors?.email?.invalid ?? ""}`)
+                      .required(`${alldata?.errors?.email?.required ?? ""}`),
                   })}
                 >
                   <div className="flex flex-col grow justify-center text-black">
                     <label className="flex flex-col justify-center basis-5/6">
                       <span className="goldMask">
-                        {alldata.labels.email ?? ""}
+                        {alldata?.labels?.email ?? ""}
                       </span>
                       <InputField label="label" name="email" />
                     </label>
                     <div className="flex basis-1/6 justify-center text-step grow-0">
-                      {alldata.labels.emailNotice ?? ""}
+                      {alldata?.labels?.emailNotice ?? ""}
                     </div>
                   </div>
                 </FormStep>
@@ -564,15 +588,15 @@ export default function Home({ currentLang }: HomeProps) {
       <div className="w-screen">
         <Tutorial
           scrolToRef={scrolToRef}
-          content={alldata.section.howTo ?? ""}
+          content={alldata?.section?.howTo ?? ""}
         />
 
         <div className="mt-[9vh] flex flex-col items-center text-center">
           <h2 className=" text-success text-2xl">
-            {alldata.section.about.title ?? ""}
+            {alldata?.section?.about?.title ?? ""}
           </h2>
           <p className="w-4/5 md:w-4/5 sm:w-4/5 xs:w-4/5 xxs:5/5">
-            {alldata.section.about.description ?? ""}
+            {alldata?.section?.about?.description ?? ""}
           </p>
 
           {/* <FaStarOfLife />
@@ -580,8 +604,8 @@ export default function Home({ currentLang }: HomeProps) {
           <GiJusticeStar /> */}
         </div>
 
-        <Steps content={alldata.section ?? ""} />
-        <Footer content={alldata.footer ?? ""} />
+        <Steps content={alldata?.section ?? ""} />
+        <Footer content={alldata?.footer ?? ""} />
       </div>
     </div>
   );
