@@ -28,6 +28,8 @@ export const POST = async (request) => {
       footer,
       other,
       errors,
+      opengraph,
+      keywords,
     } = body;
 
     const newPost = await prisma.post.create({
@@ -43,6 +45,8 @@ export const POST = async (request) => {
         footer,
         other,
         errors,
+        opengraph,
+        keywords,
       },
     });
 

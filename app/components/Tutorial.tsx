@@ -18,7 +18,9 @@ export default function Tutorial({ scrolToRef, content }: any, ref: any) {
 
       <div className="flex flex-col items-center justify-center ">
         <h2 className="text-2xl text-success">{content.title}</h2>
-        <p>{content.description}</p>
+        <p className="w-4/5 md:w-4/5 sm:w-4/5 xs:w-4/5 xxs:5/5">
+          {content.description}
+        </p>
       </div>
       <div className="flex justify-between w-full sm:flex-col sm:gap-6 overflow-hidden">
         <div className="flex flex-col justify-between text-center">

@@ -10,7 +10,7 @@ export type GenerationState = {
 };
 
 export const useLangStore = create<GenerationState>((set) => ({
-  langs: { en: "en", fr: "fr" },
+  langs: { en: "en", fr: "fr", ru: "ru", ar: "ar", uz: "uz" }, // langs to be added here
   setLangs: (langs: {
     /** Might give an error */
   }) => set(langs),

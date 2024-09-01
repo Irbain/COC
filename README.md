@@ -1,46 +1,159 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# API Documentation
 
-## Getting Started
+## Posting content via REST client:
 
-First, run the development server:
+- Create a .rest file on the root of the folder
+- Use the following format to update data
+  PATCH http://localhost:3000/api/lang/656f462e4cb0e05cde00392d  
+  656f462e4cb0e05cde00392d = en id
+  Content-Type: application/json
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  {
+  "id": "656f462e4cb0e05cde00392d",
+  "lang": "en",
+  "title": "Clash Of Clans Gems Giveaway",
+  "description": "To edit later",
+  "buttons": {
+  "next": "Next",
+  "back": "Back",
+  "submit": "Submit"
+  },
+  "labels": {
+  "name": "Name",
+  "username": "Username",
+  "device": "Device",
+  "email": "Email Address",
+  "wait": "Please Wait",
+  "emailNotice": "Note: You will recieve your gift on your email"
+  },
+  "h1": {
+  "one": "GEMS GIVEAWAY",
+  "two": "Second Empty"
+  },
+  "radio": {
+  "device": {
+  "android": "Android",
+  "ios": "iOS",
+  "other": "Other"
+  },
+  "card": {
+  "first": {
+  "title": "Pile of Gems",
+  "amount": "1200",
+  "image": "path",
+  "alt": "Pile of Gems"
+  },
+  "second": {
+  "title": "Sack of Gems",
+  "amount": "2500",
+  "image": "path",
+  "alt": "Sack of Gems"
+  },
+  "third": {
+  "title": "Box of Gems",
+  "amount": "6500",
+  "image": "path",
+  "alt": "Box of Gems"
+  }
+  }
+  },
+  "section": {
+  "howTo": {
+  "title": "How to Get Clash of Clans Gems ?",
+  "description": "If you are looking to get some Clash of Clans gems, there are several ways to do that for free, using these methods on this article. /nBut if today is your lucky day, you will get an extra way to end up one of the winners of the green diamonds that everyone is looking for, many players have gotten lucky already and there are still unlimited chances for others in the future. \nThe more players who participate in our survey, the more opportunities there will be to earn unlimited gems, and by sharing the giveaway with your friend you will be able to increase your chance to be a winner.",
+  "step": {
+  "one": {
+  "title": "Submit Your Informations",
+  "description": "Add your name and your personal email"
+  },
+  "two": {
+  "title": "Winners Selection",
+  "description": "Lucky winners get selected every week, you might be one of them"
+  },
+  "three": {
+  "title": "Get Your Gift",
+  "description": "The redemption code will be sent via email"
+  }
+  }
+  },
+  "about": {
+  "title": "How to Apply For The Giveaway?",
+  "description": "It will not take you more than some few minutes to get a chance to earn Coc gems to improve your village and your army faster and become the strongest member of your clan and to get your favorite Clash of Clans skins, all you have to do is to fill out your information, complete a few simple tasks, and then wait to receive the notification containing the result on your email."
+  },
+  "steps": {
+  "one": {
+  "title": "Step One: Fill Your Informations",
+  "description": "Add your name and your personal email"
+  },
+  "two": {
+  "title": "Step Two: Wait For The Selection",
+  "description": "We select 10 winners everyweek, you might be one of them"
+  },
+  "three": {
+  "title": "Step Three: Get You Redemption Code",
+  "description": "Winners will recieve and email to get their gift"
+  }
+  }
+  },
+  "footer": {
+  "copyrights": {
+  "one": "Copyright",
+  "two": "All Right Reserved"
+  },
+  "home": "Home",
+  "terms": "Terms of Service",
+  "policy": "Privacy Policy"
+  },
+  "other": {
+  "title": {
+  "agreement": "I Agree To Terms and Conditions of the Giveaway"
+  },
+  "cta": {
+  "selectgift": "Select Your Gift"
+  },
+  "nav": "How to use ?"
+  },
+  "errors": {
+  "gems": "Please Select An Option",
+  "devices": "",s
+  "input": {
+  "name": "• Name is required",
+  "shortname": "• Too Short Name",
+  "terms": "• Accept Terms",
+  "device": "• Select Your Device"
+  },
+  "email": {
+  "required": "• Email is required",
+  "invalid": "• Enter a valid email"
+  },
+  "verification": "Please finish the tasks to move on"
+  },
+  "opengraph": {
+  "title": "FREE GEMS",
+  "alt": "coc diamonds"
+  }
+  }
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Adding Data:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Update the Prisma Schema
+- update on app/api/lang/[id]/route.js PATCH function
+- update on app/api/lang/route.js PATCH function
+- npx prisma generate
+- npx prisma bd push
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Adding Languages:
 
-## Learn More
+After adding a language it must be added on the following places :
 
-To learn more about Next.js, take a look at the following resources:
+- app/[lang]/page on alternates.lagnauges
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Url:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Add production url into const url = proccess.en.NEXT || "here"
 
-## Deploy on Vercel
+TODO:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-npx install prisma --save-dev
-npx prisma init
-npx prisma db push
-
-// removed: data.ts
-
-- formikDox.tsx
-- progress
-- README
+- Add Keywords app/[lang]/page on data
+- google verification
+- add env "google" to vercel

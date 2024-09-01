@@ -41,6 +41,8 @@ export const PATCH = async (request, { params }) => {
       footer,
       other,
       errors,
+      opengraph,
+      keywords,
     } = body;
 
     const { id } = params;
@@ -61,6 +63,8 @@ export const PATCH = async (request, { params }) => {
         footer,
         other,
         errors,
+        opengraph,
+        keywords,
       },
     });
 

@@ -23,6 +23,8 @@ model Post {
   footer Json?
   other Json?
   errors Json?
+  opengraph Json?
+  keywords Json?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

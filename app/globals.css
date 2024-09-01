@@ -80,10 +80,6 @@ li {
   -webkit-background-clip: text;
 }
 
- {
-  /* section*/
-}
-
 @supports (animation: grow 0.5s cubic-bezier(0.25, 0.25, 0.25, 1) forwards) {
   .tick {
     stroke-opacity: 0;

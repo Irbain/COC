@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import ClashBtn from "../ClashBtn";
-
 import { FaStarOfLife } from "react-icons/fa";
 import { GiBeveledStar, GiJusticeStar } from "react-icons/gi";
 import { FaRegCheckCircle, FaCheckCircle } from "react-icons/fa";
@@ -20,7 +18,6 @@ import { useRef, forwardRef, useState, useEffect } from "react";
 import Skroll from "../Scroll";
 import Verification from "../verification";
 import { listSubheaderClasses } from "@mui/material";
-import Head from "next/head";
 import Script from "next/script";
 import { useLangStore } from "@/app/utils/langStore";
 
@@ -123,17 +120,13 @@ interface HomeProps {
   currentLang: string;
 }
 
-// Example of alldata being potentially undefined or null
-
 export default function Home({ currentLang }: HomeProps) {
-  // alldata: any
-  //Start
   const [alldata, setAllData] = useState<Partial<dataObject> | undefined>({
-    lang: "zh",
+    lang: "",
     title: "",
-    description: "string",
-    buttons: "any", // Specify a more appropriate type if known
-    labels: "any", // Specify a more appropriate type if known
+    description: "",
+    buttons: "", // Specify a more appropriate type if known
+    labels: "", // Specify a more appropriate type if known
     h1: {
       one: "",
       two: "",
@@ -146,8 +139,8 @@ export default function Home({ currentLang }: HomeProps) {
         third: { amount: "", title: "" },
       },
       device: {
-        ios: "IOS",
-        android: "Android",
+        ios: "",
+        android: "",
         other: "",
       },
     },
@@ -158,16 +151,16 @@ export default function Home({ currentLang }: HomeProps) {
       },
       steps: {
         one: {
-          title: "string",
-          description: "string",
+          title: "",
+          description: "",
         },
         two: {
-          title: "string",
-          description: "string",
+          title: "",
+          description: "",
         },
         three: {
-          title: "string",
-          description: "string",
+          title: "",
+          description: "",
         },
       },
       howTo: {
@@ -175,16 +168,16 @@ export default function Home({ currentLang }: HomeProps) {
         description: "",
         step: {
           one: {
-            title: "String",
-            description: "String",
+            title: "",
+            description: "",
           },
           two: {
-            title: "String",
-            description: "String",
+            title: "",
+            description: "",
           },
           three: {
-            title: "String",
-            description: "String",
+            title: "",
+            description: "",
           },
         },
       },
@@ -196,7 +189,7 @@ export default function Home({ currentLang }: HomeProps) {
       },
     },
     other: {
-      nav: "nav",
+      nav: "",
       cta: {
         selectgift: "",
       },
@@ -217,11 +210,12 @@ export default function Home({ currentLang }: HomeProps) {
   const { langs, setLangs, getLang } = useLangStore();
 
   useEffect(() => {
+    //zuztand
     const fetchLang = async () => {
       try {
         const data = await getLang(currentLang);
         // console.log("zustand:" + JSON.stringify(data)); //[{"id":"656f462e4cb0e05cde00392d"
-        console.log("zustand:" + JSON.stringify(data[0])); //{"id":"656f462e4cb0e05cde00392d"
+        // console.log("zustand:" + JSON.stringify(data[0])); //{"id":"656f462e4cb0e05cde00392d"
         setAllData(data[0]);
       } catch (error) {
         console.error(error);
@@ -230,32 +224,12 @@ export default function Home({ currentLang }: HomeProps) {
 
     fetchLang();
   }, [getLang]);
-  //End
-
-  // console.log("****all DATA:" + JSON.stringify(alldata)); // {"alldata":{"id":
-  //console.log("****all DATA:" + JSON.stringify(alldata.alldata)); // ****all DATA:{"id":"
 
   const CPA_URL =
     "https://d2p0pvtijhzwny.cloudfront.net/public/offers/feed.php?user_id=321099&api_key=cacfc4bbbaa9a3c38e239856f17ca423&s1=&s2=";
   const scrolToRef = useRef();
   const accent = "accent-[#898989d8]";
   const [show, setShow] = useState(false);
-  //const offersRef = useRef(null);
-  //const [data, setData] = useState();
-
-  // console.log("list of offers", offers);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch(
-  //       "https://d2p0pvtijhzwny.cloudfront.net/public/offers/feed.php?user_id=321099&api_key=cacfc4bbbaa9a3c38e239856f17ca423&s1=&s2="
-  //     );
-  //     const data = await response.json();
-  //   };
-  //   fetchData();
-  //   setData(data);
-  // }, []);
-
   const [offers, setOffers] = useState([]);
   const offersRef = useRef([]);
   useEffect(() => {
@@ -285,17 +259,14 @@ export default function Home({ currentLang }: HomeProps) {
 
   return (
     <div className="w-screen p-0 m-0">
-      <main
-        className="z-10 flex min-h-screen flex-col items-center justify-between p-0 m-0 h-screen w-screen box-shadow shadow-2xl
-      "
-      >
+      <main className="z-10 flex min-h-screen flex-col items-center justify-between p-0 m-0 h-screen w-screen box-shadow shadow-2xl">
         <div>
           <Skroll
             scrolToRef={scrolToRef}
             text={alldata?.other?.nav ?? "how it work"}
           />
-          <div className="absolute top-0 left-0 right-0 w-screen h-screen z-1">
-            {/* <Image
+          <div className="select-none absolute top-0 left-0 right-0 w-screen h-screen z-1">
+            <Image
               priority={false}
               className="pointer-events-none w-screen h-full"
               alt=""
@@ -305,12 +276,12 @@ export default function Home({ currentLang }: HomeProps) {
               //objectPosition="center"
               quality={40}
               loading="lazy"
-            /> */}
+            />
           </div>
 
           {/* center and edit h */}
           <div
-            className="mt-[15%] w-[90vw] sm:h-[50vh] h-[70vh]
+            className="mt-[15%] sm:mt-[25%] w-[90vw] sm:h-[60vh] h-[70vh]
           min-h-[250px] max-w-3xl lg:max-w-6xl max-h-[800px] rounded-xl drop-shadow-[0_15px_15px_#000000] 
           bg-gradient-to-t from-[#C47D3A] via-[#FEC06B] to-[#FFEE61] p-[3px]"
           >
@@ -320,20 +291,20 @@ export default function Home({ currentLang }: HomeProps) {
           w-full h-full rounded-xl border-black border-[0.3px]
           "
             >
-              <div className="flex justify-center">
-                {/* <Image
+              <div className=" flex justify-center">
+                <Image
                   priority={false}
-                  className="pointer-events-none -translate-y-3/4 -mb-9 drop-shadow-[0_10px_5px_#000000] w-[15vw] md:w-[16vw] sm:w-[30vw] xs:w-[30vw] xxs:w-[30vw]
+                  className="pointer-events-none select-none -translate-y-3/4 -mb-9 drop-shadow-[0_10px_5px_#000000] w-[15vw] md:w-[16vw] sm:w-[30vw] xs:w-[30vw] xxs:w-[30vw]
                    h-auto"
                   alt=""
                   src="/coc_logo.png"
                   width={300}
                   height={200}
-                /> */}
+                />
               </div>
               <h1
-                className="drop-shadow-[1px_2px_0.1px_#000000]
-              text-white bg-clip-text bg-gradient-to-r from-[#C47D3A] via-[#FEC06B] to-[#FFEE61]"
+                className="select-none drop-shadow-[1px_2px_0.1px_#000000]
+              text-white bg-clip-text bg-gradient-to-r from-[#C47D3A] via-[#FEC06B] to-[#FFEE61] "
               >
                 {alldata?.h1?.one ?? ""}
               </h1>
@@ -363,7 +334,7 @@ export default function Home({ currentLang }: HomeProps) {
                   })}
                 >
                   {/* <div>{data[0].name}</div> */}
-                  <h2 className="text-sm absolute top-[22%] left-0 right-0 goldMask">
+                  <h2 className=" select-none text-sm absolute top-[22%] left-0 right-0 goldMask">
                     {alldata?.other?.cta?.selectgift ?? ""}
                   </h2>
                   <div
@@ -386,8 +357,6 @@ export default function Home({ currentLang }: HomeProps) {
                           text={alldata?.radio?.card.first.title ?? " "}
                           img="/pile_of_gems.png"
                           className=" peer-checked:bg-gold"
-                          width={80}
-                          height={80}
                           quality={100}
                         />
                       </label>
@@ -400,12 +369,10 @@ export default function Home({ currentLang }: HomeProps) {
                           value="2500"
                         />
                         <GemCard
-                          amount={alldata?.radio?.card?.second?.amount ?? ""}
+                          amount={alldata?.radio?.card?.second?.amount ?? 3}
                           text={alldata?.radio?.card?.second?.title ?? ""}
                           img="/sack_of_gems.png"
                           className="peer-checked:bg-gold"
-                          width={80}
-                          height={80}
                           quality={100}
                         />
                       </label>
@@ -425,8 +392,6 @@ export default function Home({ currentLang }: HomeProps) {
                           text={alldata?.radio?.card?.third?.title ?? ""}
                           img="/box_of_gems.png"
                           className="peer-checked:bg-gold"
-                          width={80}
-                          height={80}
                           quality={100}
                         />
                       </label>
@@ -459,8 +424,8 @@ export default function Home({ currentLang }: HomeProps) {
                     className="flex flex-col h-full w-full justify-center gap-3 md:gap-6 lg:gap-10  mt-[6%]
                 "
                   >
-                    <label className="flex flex-col ">
-                      <span className="align-super goldMask">
+                    <label className="select-none flex flex-col ">
+                      <span className="select-none align-super goldMask">
                         {alldata?.labels?.name}
                       </span>
                       <InputField name="input" label="input" />
@@ -468,10 +433,10 @@ export default function Home({ currentLang }: HomeProps) {
 
                     {/* Devices */}
                     <div className="">
-                      <label className="align-super goldMask">
+                      <label className="select-none align-super goldMask">
                         {alldata?.labels?.device}
                       </label>
-                      <div className="flex justify-between items-center w-2/4 mx-auto">
+                      <div className="select-none flex justify-between items-center w-2/4 mx-auto">
                         <div className="flex items-center ">
                           <label className="cursor-pointer text-sm font-medium text-gray-900 ml-2 block">
                             <Field
@@ -488,7 +453,7 @@ export default function Home({ currentLang }: HomeProps) {
 
                         <div className="flex items-center ">
                           <label
-                            className="cursor-pointer text-sm font-medium text-gray-900
+                            className="select-none cursor-pointer text-sm font-medium text-gray-900
                          ml-2 block"
                           >
                             <Field
@@ -504,7 +469,7 @@ export default function Home({ currentLang }: HomeProps) {
                         </div>
 
                         <div className="flex items-center">
-                          <label className="cursor-pointer text-sm font-medium text-gray-900 ml-2 block">
+                          <label className="select-none cursor-pointer text-sm font-medium text-gray-900 ml-2 block">
                             <Field
                               type="radio"
                               name="devices"
@@ -522,7 +487,7 @@ export default function Home({ currentLang }: HomeProps) {
 
                     {/* Checkbutton */}
                     <div className="flex justify-center">
-                      <label className="cursor-pointer text-sm font-medium text-gray-900 ">
+                      <label className="select-none cursor-pointer text-sm font-medium text-gray-900 ">
                         <Field
                           type="checkbox"
                           name="agreement"
@@ -598,12 +563,10 @@ export default function Home({ currentLang }: HomeProps) {
           <p className="w-4/5 md:w-4/5 sm:w-4/5 xs:w-4/5 xxs:5/5">
             {alldata?.section?.about?.description ?? ""}
           </p>
-
           {/* <FaStarOfLife />
           <GiBeveledStar />
           <GiJusticeStar /> */}
         </div>
-
         <Steps content={alldata?.section ?? ""} />
         <Footer content={alldata?.footer ?? ""} />
       </div>
@@ -611,15 +574,7 @@ export default function Home({ currentLang }: HomeProps) {
   );
 }
 
-export function GemCard({
-  amount,
-  text,
-  img,
-  width,
-  height,
-  quality,
-  className,
-}: props) {
+export function GemCard({ amount, text, img, quality, className }: props) {
   return (
     <div
       className={`
@@ -639,18 +594,6 @@ export function GemCard({
       
       hover:w-[calc(100%+10px)]
       hover:h-[calc(100%+10px)] 
-      
-     ${
-       {
-         /*hover:mt-[10px] hover:mr[10px] hover:h-[120%]
-         
-         ml-[-20px] mr-[20px] mb-[-20px] mt-[20px] 
-         
-              hover:ml-[-30px] hover:mb-[-30px] 
-     hover:w-[calc(100%+20px)] hover:h-[130px]
-         */
-       }
-     }
     
     hover:shadow-white hover:shadow-lg
     active:bg-[#91edff]
@@ -659,7 +602,7 @@ export function GemCard({
 
      `}
     >
-      {/*shadow-[inset_0_2px_0px_#00000060]*/}
+      {/* shadow-[inset_0_2px_0px_#00000060] */}
       <h3
         className="
         drop-shadow-one
@@ -677,7 +620,7 @@ export function GemCard({
         {text}
       </h3>
       <div className="flex text-white">
-        {/* <Image
+        <Image
           className="pointer-events-none drop-shadow-[0_1.8px_0px_#303030] w-[20px] sm:w-[15px] h-auto"
           alt=""
           src="/coc_gem_logo.png"
@@ -686,7 +629,7 @@ export function GemCard({
           quality={40}
           priority={false}
           loading="lazy"
-        /> */}
+        />
         <div
           className="drop-shadow-one
           
@@ -700,18 +643,18 @@ export function GemCard({
         </div>
       </div>
 
-      {/* <Image
-        className="pointer-events-none w-auto h-auto"
+      <Image
+        className="pointer-events-none"
         alt=""
         src={img}
-        height={height}
-        width={width}
-        //objectFit="cover"
-        //objectPosition="center"
+        height={90}
+        width={90}
+        // objectFit="cover"
+        // objectPosition="center"
         quality={quality}
         priority={false}
         loading="lazy"
-      /> */}
+      />
     </div>
   );
 }

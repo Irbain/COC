@@ -121,7 +121,7 @@ const Verification = ({ setShow, show, wait, offers, cta }: any) => {
           ) : (
             <div className="flex flex-col items-center justify-center basis-4/6 spin mt-[6%]">
               <div className="animate-pulse">
-                <IoSettingsSharp size={80} class="text-step shd" />
+                <IoSettingsSharp size={80} className="text-step shd" />
               </div>
               <p className="loading text-step">{wait}</p>
             </div>
