@@ -3,6 +3,7 @@ import Home from "../components/_lang/Content";
 import type { Metadata } from "next";
 import { cache } from "react";
 import { getLang } from "../components/_server/GetLang";
+import RootLayout from "../layout";
 
 // FOR CONSTANT METADATA
 // export const metadata: Metadata = {
@@ -33,8 +34,6 @@ export default async function ServerComp({ params }: Props) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await getLang(params.lang);
-
-  console.log(data[0]); // Output: "Clash of Clans, Gems, Free Gems"
 
   if (!data)
     return {

@@ -1,11 +1,17 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { getLangs } from "./components/_server/GetLangs";
 
 interface Props {
   params: {
     lang: string;
   };
+  lang: string;
+}
+
+interface Lang {
+  lang: string;
 }
 
 // Font files can be colocated inside of `app`
@@ -35,14 +41,44 @@ export const metadata: Metadata = {
 //   return <div>My Post: {params.slug}</div>
 // }
 
+export async function generateStaticParams() {
+  const data: Lang[] = await getLangs();
+
+  // const maped = data.map((data) => ({
+  //   lang: data.lang,
+  // }));
+  // console.log("this is data from get Stati", maped);
+  // RETURN :
+  // this is data from get Stati [
+  //   { lang: 'ar' },
+  //   { lang: 'ru' },
+  //   { lang: 'en' },
+  //   { lang: 'uz' },
+  //   { lang: 'id' }
+  // ]
+
+  return data.map((data) => ({
+    lang: data.lang,
+  }));
+}
+
 export default async function RootLayout({
   children,
-  lang,
+  params,
 }: {
   children: React.ReactNode;
-  lang: string;
+  params: { lang: string };
 }) {
-  const langValue = lang || "en";
+  const langValue = params.lang || "en";
+  // // Log the `langValue` to see what is being rendered
+  // console.log("Lang value in RootLayout:", langValue);
+
+  // // Also log whether this is server-side or client-side
+  // if (typeof window === "undefined") {
+  //   console.log("Rendering on the server with lang:", langValue);
+  // } else {
+  //   console.log("Rendering on the client with lang:", langValue);
+  // }
   return (
     <html lang={langValue}>
       <body className={myFont.className}>
