@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - env | grep -e DATABASE_URL -e PASSWORD -e NEXT_PUBLIC_NAME -e NEXT_PUBLIC_EMAIL -e NEXT_PUBLIC_BASE_URL -e NEXT_PUBLIC_URL >> .env.production
+        # - env | grep -e DATABASE_URL -e PASSWORD -e NEXT_PUBLIC_NAME -e NEXT_PUBLIC_EMAIL -e NEXT_PUBLIC_BASE_URL -e NEXT_PUBLIC_URL >> .env.production
         - npm prisma generate
         - npm run build
   artifacts:
