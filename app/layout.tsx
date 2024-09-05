@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 // export default function Page({ params }: { params: { slug: string } }) {
 //   return <div>My Post: {params.slug}</div>
 // }
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const data: Lang[] = await getLangs();

@@ -121,18 +121,6 @@ interface HomeProps {
   currentLang: string;
 }
 
-export const getServerSideProps = () => {
-  console.log("this is process in client", process.env.DATABASE_URL);
-  return {
-    props: {
-      hello: "gello",
-    },
-  };
-};
-
-console.log("Puclic key", process.env.NEXT_PUBLIC_URL);
-console.log("Private key", process.env.PASSWORD);
-
 export default function Home({ currentLang }: HomeProps) {
   const [alldata, setAllData] = useState<Partial<dataObject> | undefined>({
     lang: "",
