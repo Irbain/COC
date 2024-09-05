@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - envCache --set stackInfo ""
         - npm ci
         - npx prisma generate
     build:
