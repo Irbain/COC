@@ -1,9 +1,7 @@
 import React from "react";
 import Home from "../components/_lang/Content";
 import type { Metadata } from "next";
-import { cache } from "react";
 import { getLang } from "../components/_server/GetLang";
-import RootLayout from "../layout";
 
 // FOR CONSTANT METADATA
 // export const metadata: Metadata = {
