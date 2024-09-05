@@ -15,7 +15,7 @@ export const getLang = async (lang: string) => {
   //   await new Promise((resolve) => setTimeout(resolve, 3000));
 
   if (!res.ok) {
-    throw new Error("Failed!!!!!");
+    throw new Error("GetLang Failed !");
   }
 
   return res.json();

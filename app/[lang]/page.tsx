@@ -15,7 +15,8 @@ interface Props {
   };
 }
 
-export default async function ServerComp({ params }: Props) {
+export default function ServerComp({ params }: Props) {
+  // removed async
   //const data = await getLang(params.lang); // params.lang prints: en
 
   //const offers = await getOffers();
@@ -33,16 +34,28 @@ export default async function ServerComp({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await getLang(params.lang);
 
-  if (!data)
+  if (!data || !data[0]) {
+    console.error(`Data is missing or empty: ${data}`); // Add this line
     return {
       title: "Not Found",
       description: "The page is not found",
     };
+  }
+
+  if (!data[0].title || !data[0].description) {
+    console.error(
+      `Data is missing expected properties: ${JSON.stringify(data[0])}`
+    ); // Add this line
+    return {
+      title: "Metadata Error",
+      description: "Unable to generate metadata",
+    };
+  }
 
   return {
-    title: `${data[0].title}`,
-    description: `${data[0].description}`,
-    keywords: ["Clash of Clans", "Gems"], //data[0].keywords.array
+    title: data[0].title,
+    description: data[0].description,
+    keywords: ["Clash of Clans", "Gems"],
     alternates: {
       canonical: `/en`,
       languages: {
