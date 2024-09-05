@@ -22,11 +22,6 @@ const myFont = localFont({
 
 const url = process.env.NEXT_PUBLIC_URL || "http://www.localhost:3000/";
 const google = process.env.GOOGLE;
-const mongo = process.env.DATABASE_URL;
-
-if (process.env.NODE_ENV === "production") {
-  console.log("here is mongo", mongo);
-}
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
