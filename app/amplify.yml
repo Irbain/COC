@@ -8,6 +8,7 @@ frontend:
         - npx prisma generate
     build:
       commands:
+        - ls -al .next/cache/
         # - env | grep -e DATABASE_URL -e PASSWORD -e NEXT_PUBLIC_NAME -e NEXT_PUBLIC_EMAIL -e NEXT_PUBLIC_BASE_URL -e NEXT_PUBLIC_URL >> .env.production
         - npm run build
   artifacts:
@@ -16,5 +17,7 @@ frontend:
       - "**/*"
   cache:
     paths:
-      # - .next/cache/**/*
-      # - node_modules/**/*
+      - .next/cache/**/*
+      - node_modules/**/*
+      # [WARNING]: ! Unable to write cache: {"code":"ERR_BAD_REQUEST","message":"Request failed with status code 404"})}
+# The error above disappeared aftehr comenthing thenext/cache // but STILL give cache errors

@@ -18,7 +18,7 @@ interface Props {
 }
 
 export default async function ServerComp({ params }: Props) {
-  const data = await getLang(params.lang); // params.lang prints: en
+  //const data = await getLang(params.lang); // params.lang prints: en
 
   //const offers = await getOffers();
   //console.log(offers);
