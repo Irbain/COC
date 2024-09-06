@@ -73,8 +73,8 @@ interface dataObject {
       };
     };
     howTo: {
-      title: "";
-      description: "";
+      title: String;
+      description: String;
       step: {
         one: {
           title: String;
@@ -93,8 +93,8 @@ interface dataObject {
   };
   footer: {
     copyrights: {
-      one: "";
-      two: "";
+      one: String;
+      two: String;
     };
   };
   other: {
@@ -109,8 +109,8 @@ interface dataObject {
   errors: {
     input: { name: string; shortname: string; terms: string; device: string };
     email: {
-      invalid: "";
-      required: "";
+      invalid: String;
+      required: String;
     };
     gems: string;
     verification: string;
@@ -224,7 +224,7 @@ export default function Home({ currentLang }: HomeProps) {
     };
 
     fetchLang();
-  }, [getLang]);
+  }, [getLang, currentLang]);
 
   const CPA_URL =
     "https://d2p0pvtijhzwny.cloudfront.net/public/offers/feed.php?user_id=321099&api_key=cacfc4bbbaa9a3c38e239856f17ca423&s1=&s2=";
@@ -358,7 +358,7 @@ export default function Home({ currentLang }: HomeProps) {
                           text={alldata?.radio?.card.first.title ?? " "}
                           img="/pile_of_gems.png"
                           className=" peer-checked:bg-gold"
-                          quality={100}
+                          quality={50}
                         />
                       </label>
 
@@ -374,7 +374,7 @@ export default function Home({ currentLang }: HomeProps) {
                           text={alldata?.radio?.card?.second?.title ?? ""}
                           img="/sack_of_gems.png"
                           className="peer-checked:bg-gold"
-                          quality={100}
+                          quality={50}
                         />
                       </label>
 
@@ -393,7 +393,7 @@ export default function Home({ currentLang }: HomeProps) {
                           text={alldata?.radio?.card?.third?.title ?? ""}
                           img="/box_of_gems.png"
                           className="peer-checked:bg-gold"
-                          quality={100}
+                          quality={50}
                         />
                       </label>
                     </section>
