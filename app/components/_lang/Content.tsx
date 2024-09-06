@@ -233,6 +233,7 @@ export default function Home({ currentLang }: HomeProps) {
   const [show, setShow] = useState(false);
   const [offers, setOffers] = useState([]);
   const offersRef = useRef([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -256,7 +257,7 @@ export default function Home({ currentLang }: HomeProps) {
     };
 
     fetchData();
-  }, []); // Empty dependency array to run only once on the client-side
+  }, [currentLang]); // Empty dependency array to run only once on the client-side
 
   return (
     <div className="w-screen p-0 m-0">
