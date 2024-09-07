@@ -21,15 +21,6 @@ import { listSubheaderClasses } from "@mui/material";
 import Script from "next/script";
 import { useLangStore } from "@/app/utils/langStore";
 
-// hi
-const validationSchema = yup.object({
-  input: yup.string().required("Name is required"),
-  email: yup
-    .string()
-    .email("Enter a valid email")
-    .required("Email is required"),
-});
-
 interface dataObject {
   lang: string;
   title: string;
@@ -332,7 +323,9 @@ export default function Home({ currentLang }: HomeProps) {
                   validationSchema={yup.object({
                     gems: yup
                       .string()
-                      .required(`${alldata?.errors?.gems ?? ""}`),
+                      .required(
+                        `${alldata?.errors?.gems ?? "Select An Option"}`
+                      ),
                   })}
                 >
                   {/* <div>{data[0].name}</div> */}
@@ -408,18 +401,30 @@ export default function Home({ currentLang }: HomeProps) {
                   validationSchema={yup.object({
                     input: yup
                       .string()
-                      .required(`${alldata?.errors?.input?.name ?? "Name"}`)
+                      .required(
+                        `${alldata?.errors?.input?.name ?? "Name is Required"}`
+                      )
                       .min(
                         3,
                         `${alldata?.errors?.input?.shortname ?? "Short Name"}`
                       ),
                     agreement: yup
                       .bool()
-                      .oneOf([true], `${alldata?.errors?.input?.terms ?? ""}`)
+                      .oneOf(
+                        [true],
+                        `${
+                          alldata?.errors?.input?.terms ??
+                          "Please Read The Guidelines"
+                        }`
+                      )
                       .required(),
                     devices: yup
                       .string()
-                      .required(`${alldata?.errors?.input?.device ?? ""}`),
+                      .required(
+                        `${
+                          alldata?.errors?.input?.device ?? "Select Your Device"
+                        }`
+                      ),
                   })}
                 >
                   <div
