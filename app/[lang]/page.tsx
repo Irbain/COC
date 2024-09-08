@@ -2,6 +2,8 @@ import React from "react";
 import Home from "../components/_lang/Content";
 import type { Metadata } from "next";
 import { getLang } from "../components/_server/GetLang";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import Error from "./error";
 
 // FOR CONSTANT METADATA
 // export const metadata: Metadata = {

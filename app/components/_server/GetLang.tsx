@@ -16,6 +16,8 @@ export const getLang = async (lang: string) => {
 
   if (!res.ok) {
     throw new Error("GetLang Failed !");
+  } else if (!URL) {
+    throw new Error("The next public URL is not here");
   }
 
   return res.json();
