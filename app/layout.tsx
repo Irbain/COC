@@ -42,14 +42,16 @@ export const metadata: Metadata = {
 // }
 export const dynamicParams = true;
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
   const languages = ["en", "fr", "ar"]; // List of languages
 
   const paths = languages.map((lang) => ({
-    params: { lang }, // This should match the dynamic [lang] parameter
+    lang, // This should match the dynamic [lang] parameter
   }));
 
-  return { paths, fallback: false }; // Ensure fallback is correctly set
+  return paths.map((path) => ({
+    params: path,
+  }));
 }
 
 export default async function RootLayout({
