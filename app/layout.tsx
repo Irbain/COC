@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const languages = ["en", "fr", "ar"]; // List of languages
+  const languages = ["en", "ru", "ar", "uz"]; // List of languages
 
   const paths = languages.map((lang) => ({
     lang, // This should match the dynamic [lang] parameter
