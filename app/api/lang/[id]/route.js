@@ -15,7 +15,7 @@ export const GET = async (request, { params }) => {
 
     if (!post) {
       return NextResponse.json(
-        { message: "Post Not found", err },
+        { message: "Language Not found", err },
         { status: 404 }
       );
     }
