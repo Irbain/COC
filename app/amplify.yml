@@ -6,6 +6,7 @@ frontend:
         - envCache --set stackInfo ""
         - npm ci
         - npx prisma generate
+        - npx prisma db push
     build:
       commands:
         - ls -al .next/cache/

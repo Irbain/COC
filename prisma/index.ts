@@ -21,7 +21,9 @@
 
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({
+  log: ["query", "info", "warn", "error"],
+});
 
 async function main() {
   // ... you will write your Prisma Client queries here
@@ -39,14 +41,14 @@ async function main() {
   //   // }
   //   return getLangs;
   // };
-  // const language = await prisma.language.create({
-  //   data: {
-  //     lang: "en",
-  //     title: "ths is english",
-  //     description: "My first body",
-  //   },
-  // });
-  // console.log(language);
+  const language = await prisma.language.create({
+    data: {
+      lang: "en",
+      title: "ths is english",
+      description: "My first body",
+    },
+  });
+  console.log(language);
   // export const deleteLang = async (id) => {
   //   await prisma.language.delete({
   //     where: {
