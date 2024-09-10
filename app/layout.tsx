@@ -20,9 +20,15 @@ const myFont = localFont({
   display: "swap",
 });
 
-const url = process.env.NEXT_PUBLIC_URL || "http://www.localhost:3000/";
+const url = process.env.NEXT_PUBLIC_URL;
 const google = process.env.GOOGLE;
+if (!url) {
+  throw new Error("NEXT_PUBLIC_URL is not defined.");
+}
 
+if (!google) {
+  throw new Error("GOOGLE environment variable is not defined.");
+}
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title: {
@@ -36,11 +42,6 @@ export const metadata: Metadata = {
     google: `google-site-verification=${google}`, // update
   },
 };
-
-// export default function Page({ params }: { params: { slug: string } }) {
-//   return <div>My Post: {params.slug}</div>
-// }
-export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const languages = ["en", "ru", "ar", "uz"]; // List of languages

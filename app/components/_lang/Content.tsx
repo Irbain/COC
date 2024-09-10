@@ -20,6 +20,7 @@ import Verification from "../verification";
 import { listSubheaderClasses } from "@mui/material";
 import Script from "next/script";
 import { useLangStore } from "@/app/utils/langStore";
+import { NextResponse } from "next/server";
 
 interface dataObject {
   lang: string;
