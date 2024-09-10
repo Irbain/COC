@@ -12,14 +12,6 @@ export const GET = async (request, { params }) => {
         lang: id,
       },
     });
-
-    if (!post) {
-      return NextResponse.json(
-        { message: "Language Not found", err },
-        { status: 404 }
-      );
-    }
-
     return NextResponse.json(post);
   } catch (err) {
     return NextResponse.json({ message: "GET Error", err }, { status: 500 });

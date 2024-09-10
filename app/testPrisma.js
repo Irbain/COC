@@ -1,5 +1,5 @@
-// testPrisma.js
-const { PrismaClient } = require("@prisma/client");
+// testPrisma.mjs (or testPrisma.js if you keep it as ES module)
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function testPrisma() {
