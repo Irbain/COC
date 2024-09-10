@@ -12,8 +12,9 @@ export const metadata: Metadata = {
 // by creating at the root app robot.ts see the nextjs docs
 
 const page = () => {
-  const name = process.env.NEXT_PUBLIC_NAME;
-  const email = process.env.NEXT_PUBLIC_EMAIL;
+  const name = "COC Gems";
+
+  const email = "contact@email.com";
   return (
     <div>
       <div className="p-[5%]">
