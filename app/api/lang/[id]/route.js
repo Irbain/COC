@@ -1,5 +1,5 @@
 // http://localhost:3000/api/lang/13123
-import prisma from "@/prisma";
+import prisma from "@/prisma/index";
 import { NextResponse } from "next/server";
 
 export const GET = async (request, { params }) => {
@@ -14,7 +14,11 @@ export const GET = async (request, { params }) => {
     });
     return NextResponse.json(post);
   } catch (err) {
-    return NextResponse.json({ message: "GET Error", err }, { status: 500 });
+    console.error("GET Error:", err);
+    return NextResponse.json(
+      { message: "GET Error", error: err.message },
+      { status: 500 }
+    );
   }
 };
 
@@ -85,6 +89,10 @@ export const DELETE = async (request, { params }) => {
 
     return NextResponse.json(" Deleted");
   } catch (err) {
-    return NextResponse.json({ message: "Delete Error", err }, { status: 500 });
+    console.error("DELETE Error:", err);
+    return NextResponse.json(
+      { message: "Delete Error", error: err.message },
+      { status: 500 }
+    );
   }
 };
