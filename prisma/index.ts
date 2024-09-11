@@ -26,6 +26,15 @@ const prisma = new PrismaClient({
 });
 
 async function main() {
+  if (process.env.NODE_ENV === "production") {
+    prisma = new PrismaClient();
+  } else {
+    if (!global.prisma) {
+      global.prisma = new PrismaClient();
+    }
+    prisma = global.prisma;
+  }
+
   // ... you will write your Prisma Client queries here
   // export const getLangs = async (lang, title, description) => {
   //   const lange = await prisma.language.findMany({
