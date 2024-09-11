@@ -21,7 +21,7 @@ const myFont = localFont({
 });
 
 const url = process.env.NEXT_PUBLIC_URL;
-const google = process.env.GOOGLE;
+const google = "324234";
 if (!url) {
   throw new Error("NEXT_PUBLIC_URL is not defined.");
 }
