@@ -1,5 +1,5 @@
 // http://localhost:3000/api/lang/13123
-import prisma from "@/app/utils/prismadb";
+import prisma from "@/prisma";
 import { NextResponse } from "next/server";
 
 export const GET = async (request, { params }) => {
