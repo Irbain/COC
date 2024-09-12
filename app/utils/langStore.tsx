@@ -16,7 +16,7 @@ export const useLangStore = create<GenerationState>((set) => ({
   }) => set(langs),
   getLang: cache(async (lang: string) => {
     const res = await fetch(
-      `${URL}/api/lang/${lang}`
+      `${URL}api/lang/${lang}`
       //, {
       // cache: "no-store",
 
