@@ -220,7 +220,7 @@ export default function Home({ currentLang }: HomeProps) {
                 {alldata?.h1?.one ?? ""}
               </h1>
               <MultiStepForm
-                buttonsTitles={alldata?.buttons ?? {}}
+                buttonsTitles={alldata?.buttons ?? ""}
                 show={show}
                 initialValues={{
                   email: "",
@@ -282,7 +282,7 @@ export default function Home({ currentLang }: HomeProps) {
                           value="2500"
                         />
                         <GemCard
-                          amount={alldata?.radio?.card?.second?.amount ?? 3}
+                          amount={alldata?.radio?.card?.second?.amount ?? ""}
                           text={alldata?.radio?.card?.second?.title ?? ""}
                           img="/sack_of_gems.png"
                           className="peer-checked:bg-gold"
@@ -351,7 +351,7 @@ export default function Home({ currentLang }: HomeProps) {
                   >
                     <label className="select-none flex flex-col ">
                       <span className="select-none align-super goldMask">
-                        {alldata?.labels?.name}
+                        {alldata?.labels?.name ?? ""}
                       </span>
                       <InputField name="input" label="input" />
                     </label>
@@ -359,7 +359,7 @@ export default function Home({ currentLang }: HomeProps) {
                     {/* Devices */}
                     <div className="">
                       <label className="select-none align-super goldMask">
-                        {alldata?.labels?.device}
+                        {alldata?.labels?.device ?? ""}
                       </label>
                       <div className="select-none flex justify-between items-center w-2/4 mx-auto">
                         <div className="flex items-center ">
