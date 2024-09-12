@@ -26,6 +26,8 @@ export const useLangStore = create<GenerationState>((set) => ({
 
     //   await new Promise((resolve) => setTimeout(resolve, 3000));
 
+    console.log(`${URL}api/lang/${lang}`);
+
     if (!res.ok) {
       throw new Error("Failed!!!!!");
     }
