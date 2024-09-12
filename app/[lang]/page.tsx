@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: data[0].title,
     description: data[0].description,
-    keywords: ["Clash of Clans", "Gems"],
+    keywords: data[0].keywords,
     alternates: {
       canonical: `/en`,
       languages: {

@@ -31,46 +31,46 @@ export interface dataObject {
   };
   section: {
     about: {
-      title: String;
-      description: String;
+      title: string;
+      description: string;
     };
     steps: {
       one: {
-        title: String;
-        description: String;
+        title: string;
+        description: string;
       };
       two: {
-        title: String;
-        description: String;
+        title: string;
+        description: string;
       };
       three: {
-        title: String;
-        description: String;
+        title: string;
+        description: string;
       };
     };
     howTo: {
-      title: String;
-      description: String;
+      title: string;
+      description: string;
       step: {
         one: {
-          title: String;
-          description: String;
+          title: string;
+          description: string;
         };
         two: {
-          title: String;
-          description: String;
+          title: string;
+          description: string;
         };
         three: {
-          title: String;
-          description: String;
+          title: string;
+          description: string;
         };
       };
     };
   };
   footer: {
     copyrights: {
-      one: String;
-      two: String;
+      one: string;
+      two: string;
     };
   };
   other: {
@@ -85,8 +85,8 @@ export interface dataObject {
   errors: {
     input: { name: string; shortname: string; terms: string; device: string };
     email: {
-      invalid: String;
-      required: String;
+      invalid: string;
+      required: string;
     };
     gems: string;
     verification: string;
