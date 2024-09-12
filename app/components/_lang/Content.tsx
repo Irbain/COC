@@ -1,113 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { FaStarOfLife } from "react-icons/fa";
-import { GiBeveledStar, GiJusticeStar } from "react-icons/gi";
-import { FaRegCheckCircle, FaCheckCircle } from "react-icons/fa";
 import { Formik, Field, FormikProps, useFormikContext } from "formik";
-import { props } from "../../props";
-import { cn } from "../../utils/cn";
+import { dataObject, props } from "../../props";
 import * as yup from "yup";
 import MultiStepForm, { FormStep } from "../../utils/MultiStepForm";
 import InputField from "../../utils/InputField";
-import FormNavigation from "../../utils/FormNavigation";
 import Tutorial from "../Tutorial";
 import Steps from "../Steps";
 import Footer from "../Footer";
 import { useRef, forwardRef, useState, useEffect } from "react";
 import Skroll from "../Scroll";
 import Verification from "../verification";
-import { listSubheaderClasses } from "@mui/material";
-import Script from "next/script";
 import { useLangStore } from "@/app/utils/langStore";
-import { NextResponse } from "next/server";
-
-interface dataObject {
-  lang: string;
-  title: string;
-  description: string;
-  buttons?: any; // Specify a more appropriate type if known
-  labels?: any; // Specify a more appropriate type if known
-  h1: {
-    one: string;
-    two: string;
-    three: string;
-  };
-  radio: {
-    card: {
-      first: { amount: string; title: string };
-      second: { amount: string; title: string };
-      third: { amount: string; title: string };
-    };
-    device: {
-      ios: string;
-      android: string;
-      other: string;
-    };
-  };
-  section: {
-    about: {
-      title: String;
-      description: String;
-    };
-    steps: {
-      one: {
-        title: String;
-        description: String;
-      };
-      two: {
-        title: String;
-        description: String;
-      };
-      three: {
-        title: String;
-        description: String;
-      };
-    };
-    howTo: {
-      title: String;
-      description: String;
-      step: {
-        one: {
-          title: String;
-          description: String;
-        };
-        two: {
-          title: String;
-          description: String;
-        };
-        three: {
-          title: String;
-          description: String;
-        };
-      };
-    };
-  };
-  footer: {
-    copyrights: {
-      one: String;
-      two: String;
-    };
-  };
-  other: {
-    nav: string;
-    cta: {
-      selectgift: string;
-    };
-    title: {
-      agreement: string;
-    };
-  };
-  errors: {
-    input: { name: string; shortname: string; terms: string; device: string };
-    email: {
-      invalid: String;
-      required: String;
-    };
-    gems: string;
-    verification: string;
-  };
-}
 
 interface HomeProps {
   currentLang: string;
@@ -198,6 +103,18 @@ export default function Home({ currentLang }: HomeProps) {
       },
       gems: "",
       verification: "",
+    },
+    opengraph: {
+      title: "",
+      alt: "",
+    },
+    keywords: {
+      one: "",
+      two: "",
+      three: "",
+      four: "",
+      five: "",
+      six: "",
     },
   });
   const { langs, setLangs, getLang } = useLangStore();
