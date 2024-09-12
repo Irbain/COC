@@ -19,10 +19,10 @@ export default function ServerComp({ params }: Props) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  return {
-    title: "Not Found",
-    description: "The page is not found",
-  };
+  // return {
+  //   title: "Not Found",
+  //   description: "The page is not found",
+  // };
   const data = await getLang(params.lang);
 
   if (!data || !data[0]) {
