@@ -154,7 +154,7 @@ After adding a language it must be added on the following places :
 
 TODO:
 
-- Add Keywords app/[lang]/page on data
+- Add map to Keywords app/[lang]/page o
 - google verification
 - add env "google" to vercel
 

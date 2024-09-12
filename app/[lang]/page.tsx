@@ -3,12 +3,6 @@ import Home from "../components/_lang/Content";
 import type { Metadata } from "next";
 import { getLang } from "../components/_server/GetLang";
 
-// FOR CONSTANT METADATA
-// export const metadata: Metadata = {
-//   title: "This is title",
-//   description: "Description section i this one",
-// };
-
 interface Props {
   params: {
     lang: string;
@@ -16,13 +10,6 @@ interface Props {
 }
 
 export default function ServerComp({ params }: Props) {
-  // removed async
-  //const data = await getLang(params.lang); // params.lang prints: en
-
-  //const offers = await getOffers();
-  //console.log(offers);
-  //const [posts, users] = await Promise.all([getLangs(), getOffers()]);
-
   return (
     <>
       <Home currentLang={params.lang}></Home>
@@ -32,6 +19,10 @@ export default function ServerComp({ params }: Props) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    title: "Not Found",
+    description: "The page is not found",
+  };
   const data = await getLang(params.lang);
 
   if (!data || !data[0]) {
