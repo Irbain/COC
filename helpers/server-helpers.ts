@@ -1,11 +1,11 @@
-// import prisma from "@/prisma";
+import prisma from "@/prisma";
 
-// export const connectToDb = async () => {
-//   try {
-//     await prisma.$connect();
-//   } catch (error) {
-//     console.log(error);
+export const connectToDb = async () => {
+  try {
+    await prisma.$connect();
+  } catch (error) {
+    console.log(error);
 
-//     throw new Error("Unable to connect to db");
-//   }
-// };
+    throw new Error("Unable to connect to db");
+  }
+};

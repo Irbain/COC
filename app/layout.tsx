@@ -3,17 +3,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { getLangs } from "./components/_server/GetLangs";
 
-interface Props {
-  params: {
-    lang: string;
-  };
-  lang: string;
-}
-
-interface Lang {
-  lang: string;
-}
-
 // Font files can be colocated inside of `app`
 const myFont = localFont({
   src: "./font/coc.otf",
