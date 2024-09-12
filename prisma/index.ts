@@ -38,7 +38,8 @@ async function main() {
   // };
 }
 
-main();
+// In your prisma/index.ts file, the main() function is not necessary unless you have specific asynchronous tasks you want to execute when the Prisma client is initialized. Since your current main() function is empty, it can be safely removed.
+//main();
 
 // .then(async () => {
 //   await prisma.$disconnect();
