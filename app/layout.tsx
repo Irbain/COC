@@ -32,17 +32,31 @@ export const metadata: Metadata = {
   },
 };
 
-export async function generateStaticParams() {
-  const languages = ["en", "ru", "ar", "uz"]; // List of languages
+// export async function generateStaticParams() {
+//   const languages = ["en", "ru", "ar", "uz"]; // List of languages
 
-  const paths = languages.map((lang) => ({
-    lang, // This should match the dynamic [lang] parameter
-  }));
+//   const paths = languages.map((lang) => ({
+//     lang, // This should match the dynamic [lang] parameter
+//   }));
+
+//   return paths.map((path) => ({
+//     params: path,
+//   }));
+// }
+
+export const generateStaticParams = () => {
+  // dynamic is above
+  const paths = [
+    { lang: "en" },
+    { lang: "ru" },
+    { lang: "ar" },
+    { lang: "uz" },
+  ];
 
   return paths.map((path) => ({
     params: path,
   }));
-}
+};
 
 export default async function RootLayout({
   children,
