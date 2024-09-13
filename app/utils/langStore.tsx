@@ -4,8 +4,7 @@ import { cache } from "react";
 const URL = process.env.NEXT_PUBLIC_URL;
 
 export type GenerationState = {
-  langs: {};
-  //   langs: { en: string; fr: string  };
+  langs: { en: string; fr: string; ru: string; ar: string; uz: string };
   setLangs: (isLoading: boolean) => void;
   getLang: (lang: string) => Promise<any>;
 };
