@@ -11,6 +11,8 @@ const myFont = localFont({
 
 const url = process.env.NEXT_PUBLIC_URL;
 const google = "jmX4nMbvgTpqETiEDy2CYBcRRqJItwlvtdDQmhNLWvg";
+const yandex = "144555efcda11f0f";
+
 if (!url) {
   throw new Error("NEXT_PUBLIC_URL is not defined.");
 }
@@ -28,7 +30,8 @@ export const metadata: Metadata = {
     //     Resulting Title: "About Us | Gems"
   },
   verification: {
-    google: google, // update
+    google: google,
+    yandex: yandex,
   },
 };
 

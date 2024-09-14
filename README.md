@@ -158,12 +158,6 @@ After adding a language it must be added on the following places :
 
 - Add production url into const url = proccess.en.NEXT || "here"
 
-TODO:
-
-- Add map to Keywords app/[lang]/page o
-- google verification
-- add env "google" to vercel
-
 # app/[lang]/opengraph-image.tsx
 
 // // import { getPostBySlug } from "@/lib/getData";
@@ -256,3 +250,8 @@ TODO:
 // size
 // );
 // }
+
+TODO:
+
+- yandex
+- bing
