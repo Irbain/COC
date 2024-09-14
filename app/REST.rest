@@ -1,137 +1,137 @@
-GET  http://localhost:3000/api/lang/en
+GET  http://localhost:3000/api/lang
 Content-Type: application/json
 
-  {
-    "id": "656f462e4cb0e05cde00392d",
-    "lang": "en",
-    "title": "Clash Of Clans Gems Giveaway",
-    "description": "You can now win an unlimited amount of Clash of Clans Gems to purchase resources and fill up your elixir storage and gold storage to the max. All you need to do is to fill the survey to receive a Clash of Clans gems code and buy all the skins you like from the store. Fill up your main village storages, upgrade your village and army to become the strongest in your clan and the strongest in clan wars.",
-    "buttons": {
-      "next": "Next",
-      "back": "Back",
-      "submit": "Submit"
+{
+  "lang": "fr",
+  "title": "Bijoux Clash of Clans",
+  "description": "Vous pouvez maintenant gagner une quantité illimitée des bijoux Clash of Clans pour acheter des ressources et remplir les réserves d'élixir et d'or au maximum. Il vous suffit de vous inscrire maintenant et d'obtenir un code pour des bijoux Clash of Clans. Achetez tous les skins que vous aimez dans la boutique, remplissez les réservoirs de votre village principal, développez votre village et votre armée pour devenir le plus fort de votre tribu et le plus puissant dans la Guerre des Clans.",
+  "buttons": {
+    "next": "Suivant",
+    "back": "Précédent",
+    "submit": "Confirmer"
+  },
+  "labels": {
+    "name": "Nom",
+    "username": "ID",
+    "device": "Appareil",
+    "email": "E-mail",
+    "wait": "Veuillez patienter",
+    "emailNotice": "Remarque : les bijoux seront envoyés par e-mail"
+  },
+  "h1": {
+    "one": "Bijoux Gratuits",
+    "two": "Second Vide"
+  },
+  "radio": {
+    "device": {
+      "android": "Android",
+      "ios": "Apple",
+      "other": "Autre"
     },
-    "labels": {
-      "name": "Name",
-      "username": "Username",
-      "device": "Device",
-      "email": "Email Address",
-      "wait": "Please Wait",
-      "emailNotice": "Note: You will recieve your gift on your email"
-    },
-    "h1": {
-      "one": "GEMS GIVEAWAY",
-      "two": "Second Empty"
-    },
-    "radio": {
-      "device": {
-        "android": "Android",
-        "ios": "iOS",
-        "other": "Other"
+    "card": {
+      "first": {
+        "title": "Pack de Bijoux",
+        "amount": "1200",
+        "image": "path",
+        "alt": "Pack de Bijoux"
       },
-      "card": {
-        "first": {
-          "title": "Pile of Gems",
-          "amount": "1200",
-          "image": "path",
-          "alt": "Pile of Gems"
-        },
-        "second": {
-          "title": "Sack of Gems",
-          "amount": "2500",
-          "image": "path",
-          "alt": "Sack of Gems"
-        },
-        "third": {
-          "title": "Box of Gems",
-          "amount": "6500",
-          "image": "path",
-          "alt": "Box of Gems"
-        }
+      "second": {
+        "title": "Coffre de Bijoux",
+        "amount": "2500",
+        "image": "path",
+        "alt": "Coffre de Bijoux"
+      },
+      "third": {
+        "title": "Trésor de Bijoux",
+        "amount": "6500",
+        "image": "path",
+        "alt": "Trésor de Bijoux"
       }
-    },
-    "section": {
-      "howTo": {
-        "title": "How to Get Clash of Clans Gems ?",
-        "description": "If you are looking to get some Clash of Clans gems, there are several ways to do that for free, using these methods on this article. /nBut if today is your lucky day, you will get an extra way to end up one of the winners of the green diamonds that everyone is looking for, many players have gotten lucky already and there are still unlimited chances for others in the future. \nThe more players who participate in our survey, the more opportunities there will be to earn unlimited gems, and by sharing the giveaway with your friend you will be able to increase your chance to be a winner.",
-        "step": {
-          "one": {
-            "title": "Apply to The Giveway",
-            "description": "Fill the form above for applying to weekly giveaway"
-          },
-          "two": {
-            "title": "Winners Selection",
-            "description": "Lucky winners get selected every week end "
-          },
-          "three": {
-            "title": "Get Your Gift",
-            "description": "The redemption code will be sent via email to the winners"
-          }
-        }
-      },
-      "about": {
-        "title": "How to Apply For The Giveaway?",
-        "description": "It will not take you more than some few minutes to get a chance to earn Coc gems to improve your village and your army faster and become the strongest member of your clan and to get your favorite Clash of Clans skins, all you have to do is to fill out your information, complete a few simple tasks, and then wait to receive the notification containing the result on your email."
-      },
-      "steps": {
+    }
+  },
+  "section": {
+    "howTo": {
+      "title": "Comment obtenir des bijoux Clash gratuitement ?",
+      "description": "Il existe plusieurs façons d'obtenir des bijoux Guerre des Clans gratuitement. Cet article vous permet de découvrir toutes les méthodes efficaces. Si vous êtes parmi les chanceux aujourd'hui, vous pouvez ajouter une nouvelle méthode pour obtenir un code pour des bijoux Clash of Clans afin de développer votre village et votre armée rapidement et facilement, ou pour posséder les skins que vous avez toujours rêvé d'obtenir de manière légale et non piratée. De nombreux joueurs ont déjà gagné, et il reste encore des chances pour d'autres joueurs de gagner également.\n Plus il y a de participants au concours, plus vous avez de chances de gagner. N'oubliez donc pas de partager le concours avec vos amis pour augmenter vos chances aussi.",
+      "step": {
         "one": {
-          "title": "Step One: Fill Your Informations",
-          "description": "Add your name and your personal email"
+          "title": "Entrez vos informations",
+          "description": "Remplissez le formulaire ci-dessus pour participer au tirage hebdomadaire."
         },
         "two": {
-          "title": "Step Two: Wait For The Selection",
-          "description": "We select 10 winners everyweek, you might be one of them"
+          "title": "Tirage hebdomadaire",
+          "description": "Chaque week-end, dix personnes chanceuses gagnent des bijoux."
         },
         "three": {
-          "title": "Step Three: Get You Redemption Code",
-          "description": "Winners will recieve and email to get their gift"
+          "title": "Réception des cadeaux",
+          "description": "Les cadeaux sont envoyés chaque week-end par e-mail."
         }
       }
     },
-    "footer": {
-      "copyrights": {
-        "one": "Copyright",
-        "two": "All Right Reserved"
-      },
-      "home": "Home",
-      "terms": "Terms of Service",
-      "policy": "Privacy Policy"
+    "about": {
+      "title": "Comment participer au concours ?",
+      "description": "L'inscription ne vous prendra que quelques minutes, et vous pourrez ensuite obtenir des milliers de bijoux gratuitement 💎 dans le jeu Clash of Clans🔥 de manière garantie. Tout ce que vous avez à faire est de saisir vos informations personnelles et de terminer quelques tâches pour recevoir une notification dans votre boîte e-mail."
     },
-    "other": {
-      "title": {
-        "agreement": "I Agree To Terms and Conditions of the Giveaway"
+    "steps": {
+      "one": {
+        "title": "Chaque joueur a droit à une seule participation",
+        "description": "Participer plusieurs fois avec le même appareil peut vous disqualifier et vous empêcher de gagner un prix."
       },
-      "cta": {
-        "selectgift": "Select Your Gift"
+      "two": {
+        "title": "Les informations personnelles doivent être correctes",
+        "description": "Ne pas fournir d'informations correctes peut entraîner la disqualification ou l'absence de réception des notifications dans votre e-mail."
       },
-      "nav": "How to use ?"
-    },
-    "errors": {
-      "gems": "Please Select An Option",
-      "devices": "",
-      "input": {
-        "name": "• Name is Required",
-        "shortname": "• Too Short Name",
-        "terms": "• Accept Terms",
-        "device": "• Select Your Device"
-      },
-      "email": {
-        "required": "• Email is Required",
-        "invalid": "• Enter a valid email"
-      },
-      "verification": "Please finish the tasks to move on"
-    },
-    "opengraph": {
-      "title": "FREE GEMS",
-      "alt": "coc diamonds"
-    },
-    "keywords": {
-        "one": "Clash of Clans Gems",
-        "two":"Coc Gems",
-        "three":"Clash of Clans Giveaway",
-        "four":"How to Get Clash of Clans Gems",
-        "five":"Free Clash of Clans Gems",
-        "six":"full elixir storage"
-      
+      "three": {
+        "title": "Partagez le concours avec les membres de votre tribu",
+        "description": "Pour augmenter vos chances, il est recommandé de partager le concours avec vos amis dans le jeu."
+      }
     }
+  },
+  "footer": {
+    "copyrights": {
+      "one": "Copyright",
+      "two": "Tous droits réservés"
+    },
+    "home": "Accueil",
+    "terms": "Conditions d'utilisation",
+    "policy": "Politique de confidentialité"
+  },
+  "other": {
+    "title": {
+      "agreement": "Confirmation de l'acceptation des conditions du tirage hebdomadaire"
+    },
+    "cta": {
+      "selectgift": "Veuillez choisir"
+    },
+    "nav": "Comment utiliser ?"
+  },
+  "errors": {
+    "gems": "• Veuillez choisir d'abord",
+    "devices": "• Veuillez entrer le type d'appareil",
+    "input": {
+      "name": "• Veuillez entrer votre nom",
+      "shortname": "• Veuillez entrer un nom valide",
+      "terms": "• Veuillez accepter les conditions",
+      "device": "• Veuillez choisir votre appareil"
+    },
+    "email": {
+      "required": "• Veuillez entrer votre e-mail",
+      "invalid": "• E-mail invalide"
+    },
+    "verification": "Veuillez terminer les tâches pour continuer"
+  },
+  "opengraph": {
+    "title": "Bijoux Gratuits",
+    "alt": "Bijoux Clash"
+  },
+  "keywords": {
+    "one": "Bijoux Clash",
+    "two": "Bijoux gratuits",
+    "three": "Bijoux Guerre des Clans",
+    "four": "Bijoux Clash of Clans",
+    "five": "Bijoux Clash",
+    "six": "Remplissage des réserves Clash",
+    "seven": "GAGNER ENORMEMENT DE GEMMES",
+    "eight": "GAGNER des diamonds"
   }
+}

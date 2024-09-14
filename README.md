@@ -137,6 +137,12 @@
 ## Adding Data:
 
 - Update the Prisma Schema
+- to add first update on app/api/lang/route.js POST
+- copy id generated
+- app/api/lang/[id]/route.js PATCH function
+
+for update
+
 - update on app/api/lang/[id]/route.js PATCH function
 - update on app/api/lang/route.js PATCH function
 - npx prisma generate
