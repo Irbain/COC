@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     //     Resulting Title: "About Us | Gems"
   },
   verification: {
-    google: `google-site-verification=${google}`, // update
+    google: google, // update
   },
 };
 
