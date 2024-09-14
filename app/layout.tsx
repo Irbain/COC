@@ -10,7 +10,7 @@ const myFont = localFont({
 });
 
 const url = process.env.NEXT_PUBLIC_URL;
-const google = "tM7rNJQlxx29KIHICurQkXWdrZWWQ-CSK0r-AT9tSH8";
+const google = "6FHw8Fjt_lzawBIc7sPsI_51f4Qp9jqnRcA1vg_F1Y4";
 if (!url) {
   throw new Error("NEXT_PUBLIC_URL is not defined.");
 }
