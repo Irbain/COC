@@ -10,7 +10,7 @@ const myFont = localFont({
 });
 
 const url = process.env.NEXT_PUBLIC_URL;
-const google = "6FHw8Fjt_lzawBIc7sPsI_51f4Qp9jqnRcA1vg_F1Y4";
+const google = "googledb3df5b47cda441f.html";
 if (!url) {
   throw new Error("NEXT_PUBLIC_URL is not defined.");
 }
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     //     Resulting Title: "About Us | Gems"
   },
   verification: {
-    google: google, // update
+    google: `google-site-verification=${google}`, // update
   },
 };
 
