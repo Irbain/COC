@@ -252,6 +252,3 @@ After adding a language it must be added on the following places :
 // }
 
 TODO:
-
-- yandex
-- bing
