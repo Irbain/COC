@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: allowed,
-        disallow: ["/private/", "/admin/", "/"],
+        disallow: ["/"], //"/private/", "/admin/",  removed
       },
       // Rules specific to Googlebot
       {
