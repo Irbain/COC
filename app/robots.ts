@@ -16,22 +16,22 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "Googlebot",
         allow: allowed,
-        disallow: "/no-google/",
+        //disallow: "/no-google/",
       },
       // Rules specific to Bingbot
       {
         userAgent: "Bingbot",
         allow: allowed,
-        disallow: "/bing-no/",
+        //disallow: "/bing-no/",
       },
       // Rules specific to Yandex
       {
         userAgent: "Yandex",
         allow: allowed,
-        disallow: ["/secret/", "/yandex-no/"],
+        //disallow: ["/secret/", "/yandex-no/"],
       },
     ],
-    sitemap: `${url}/sitemap.xml`,
+    sitemap: `${url}sitemap.xml`,
     host: url,
   };
 }
