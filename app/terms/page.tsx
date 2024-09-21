@@ -4,7 +4,7 @@ import React from "react";
 export const metadata: Metadata = {
   // ROBOT
   robots: {
-    index: false,
+    index: true,
     nocache: true,
     // we can add other properties
   },
