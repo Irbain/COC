@@ -19,13 +19,9 @@ export const useLangStore = create<GenerationState>((set) => ({
       `${URL}/api/lang/${lang}`
       //, {
       // cache: "no-store",
-
       // https://www.youtube.com/watch?v=cacys-rrQN8 14:45 for cache
     );
-
     //   await new Promise((resolve) => setTimeout(resolve, 3000));
-
-    console.log("currenct url fetched on zuztand:", `${URL}api/lang/${lang}`);
 
     if (!res.ok) {
       throw new Error("Failed!!!!!");

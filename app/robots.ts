@@ -31,7 +31,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/secret/", "/yandex-no/"],
       },
     ],
-    sitemap: `${url}sitemap.xml`,
+    sitemap: `${url}/sitemap.xml`,
     host: url,
   };
 }
