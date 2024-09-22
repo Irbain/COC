@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { getLangs } from "./components/_server/GetLangs";
+import { Analytics } from "@vercel/analytics/react";
 
 // Font files can be colocated inside of `app`
 const myFont = localFont({
@@ -81,7 +82,10 @@ export default async function RootLayout({
   return (
     <html lang={langValue}>
       <body className={myFont.className}>
-        <div className="bg-bg">{children}</div>
+        <div className="bg-bg">
+          {children}
+          <Analytics />
+        </div>
       </body>
     </html>
   );
