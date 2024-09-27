@@ -1,143 +1,100 @@
-PATCH  http://localhost:3000/api/lang/656f462e4cb0e05cde00392d
+PATCH http://localhost:3000/api/lang/66f6dcafe5f31fb8ca8d84f0
 Content-Type: application/json
 
 
- {
-    "id": "656f462e4cb0e05cde00392d",
-    "lang": "ru",
-    "title": "Раздача самоцветов Clash Of Clans",
-    "description": "Теперь вы можете выиграть неограниченное количество самоцветов Clash of Clans, чтобы покупать ресурсы и заполнить свои хранилища эликсира и золота до максимума. Всё, что вам нужно сделать, это заполнить опрос, чтобы получить код на самоцветы Clash of Clans и купить все скины, которые вам нравятся, в магазине. Заполните основные хранилища вашего села, улучшите своё село и армию, чтобы стать самым сильным в своём клане и самым сильным в клановых войнах.",
-    "buttons": {
-      "next": " Следующий",
-      "back": " Назад",
-      "submit": " Представить"
-    },
-    "labels": {
-      "name": " Имя",
-      "username": " Имя пользователя",
-      "device": " Устройство",
-      "email": " Адрес электронной почты",
-      "wait": " Пожалуйста, Подождите",
-      "emailNotice": " Примечание: Убедитесь что вы указали действительный адрес электронной почты"
-    },
-    "h1": {
-      "one": "Раздача самоцветов",
-      "two": "Second Empty"
-    },
-    "radio": {
-      "device": {
-        "android": " Андроид",
-        "ios": "iOS",
-        "other": " Другое устройство"
-      },
-"card": {
-  "first": {
-    "title": "Куча самоцветов",
-    "amount": "1200",
-    "image": "path",
-    "alt": "Куча самоцветов"
-  },
-  "second": {
-    "title": "Мешок самоцветов",
-    "amount": "2500",
-    "image": "path",
-    "alt": "Мешок самоцветов"
-  },
-  "third": {
-    "title": "Коробка самоцветов",
-    "amount": "6500",
-    "image": "path",
-    "alt": "Коробка самоцветов"
-  }
-}
-},
-"section": {
-  "howTo": {
-    "title": "Как получить самоцветы Clash of Clans?",
-    "description": "Если вы ищете способы получить некоторые самоцветы Clash of Clans, существует несколько способов сделать это бесплатно, используя методы, описанные в этой статье. \nНо если сегодня ваш удачный день, вы получите дополнительный шанс стать одним из победителей зелёных алмазов, которые ищут все. Многие игроки уже испытали удачу, и в будущем ещё будет много шансов для других. \nЧем больше игроков участвует в нашем опросе, тем больше возможностей будет заработать неограниченное количество самоцветов, и, поделившись раздачей с другом, вы сможете увеличить свои шансы на победу.",
-    "step": {
-      "one": {
-        "title": "Подайте заявку на раздачу",
-        "description": "Заполните форму выше, чтобы участвовать в еженедельной раздаче"
-      },
-      "two": {
-        "title": "Выбор победителей",
-        "description": "Счастливые победители выбираются каждые выходные"
-      },
-      "three": {
-        "title": "Получите свой подарок",
-        "description": "Код на получение подарка будет отправлен по электронной почте победителям"
-      }
-    }
-  },
-  "about": {
-    "title": "Как подать заявку на раздачу?",
-    "description": "Вам не потребуется более нескольких минут, чтобы получить шанс заработать самоцветы Coc, чтобы быстрее улучшить ваше село и армию и стать самым сильным членом вашего клана и получить свои любимые скины Clash of Clans. Всё, что вам нужно сделать, это заполнить вашу информацию, выполнить несколько простых задач, а затем дождаться уведомления с результатом на вашу электронную почту."
-  },
-  "steps": {
-    "one": {
-      "title": "Шаг первый: Заполните свою информацию",
-      "description": "Укажите ваше имя и личный электронный адрес"
-    },
-    "two": {
-      "title": "Шаг второй: Дождитесь выбора",
-      "description": "Мы выбираем 10 победителей каждую неделю, возможно, вы будете одним из них"
-    },
-    "three": {
-      "title": "Шаг третий: Получите свой код на получение подарка",
-      "description": "Победители получат электронное письмо с кодом для получения своего подарка"
-    }
-  }
-},
-"footer": {
-  "copyrights": {
-    "one": "Авторское право",
-    "two": "Все права защищены"
-  },
-  "home": "Главная",
-  "terms": "Условия обслуживания",
-  "policy": "Политика конфиденциальности"
-},
-    "other": {
-      "title": {
-        "agreement": " Я согласен с положениями и условиями "
-      },
-      "cta": {
-        "selectgift": " Выбери свой подарок"
-      },
-      "nav": "Как использовать ?"
-    },
-    "errors": {
-      "gems": "Пожалуйста, выберите один вариант ",
-      "devices": "",
-      "input": {
-        "name": "• Требуется имя",
-        "shortname": "• Слишком короткое имя",
-        "terms": "• Принимайте условия",
-        "device": "• Выберите своё устройство"
-      },
-      "email": {
-        "required": "• Требуется электронная почта",
-        "invalid": "• Введите действительный адрес электронной почты"
-      },
-      "verification": " Пожалуйста, завершите выполнение заданий чтобы продолжить "
-    },
-    "opengraph": {
-      "title": "бесплатные самоцветы",
-      "alt": "алмазы coc"
-    },
-"keywords": {
-  "one": "Самоцветы Clash of Clans",
-  "two": "Самоцветы Coc",
-  "three": "Раздача Clash of Clans",
-  "four": "Как получить самоцветы Clash of Clans",
-  "five": "Бесплатные самоцветы Clash of Clans",
-  "six": "Полное хранилище эликсира"
-}
+{
+"id": "66f6dcafe5f31fb8ca8d84f0", "lang": "en", "title": "Clash Of Clans Gems Giveaway", "description": "You can now win an unlimited amount of Clash of Clans Gems to purchase resources and fill up your elixir storage and gold storage to the max. All you need to do is to fill the survey to receive a Clash of Clans gems code and buy all the skins you like from the store. Fill up your main village storages, upgrade your village and army to become the strongest in your clan and the strongest in clan wars.", "buttons": {
+
+"next": "Next", "back": "Back", "submit": "Submit"
+}, "labels": {
+
+"name": "Name", "username": "Username", "device": "Device", "email": "Email Address", "wait": "Please Wait", "emailNotice": "Note: You will recieve your gift on your email"
+}, "h1": {
+
+"one": "GEMS GIVEAWAY", "two": "Second Empty"
+}, "radio": {
+
+"device": {
+"android": "Android", "ios": "iOS", "other": "Other"
+}, "card": {
+
+"first": {
+"title": "Pile of Gems", "amount": "1200", "image": "path", "alt": "Pile of Gems"
+}, "second": {
+
+"title": "Sack of Gems", "amount": "2500", "image": "path", "alt": "Sack of Gems"
+}, "third": {
+
+"title": "Box of Gems", "amount": "6500", "image": "path", "alt": "Box of Gems"
 }
 
+}
 
+}, "section": {
 
+"howTo": {
+"title": "How to Get Clash of Clans Gems ?", "description": "If you are looking to get some Clash of Clans gems, there are several ways to do that for free, using these methods on this article. /nBut if today is your lucky day, you will get an extra way to end up one of the winners of the green diamonds that everyone is looking for, many players have gotten lucky already and there are still unlimited chances for others in the future. nThe more players who participate in our survey, the more opportunities there will be to earn unlimited gems, and by sharing the giveaway with your friend you will be able to increase your chance to be a winner.", "step": {
 
+"one": {
+"title": "Apply to The Giveway", "description": "Fill the form above for applying to weekly giveaway"
+}, "two": {
 
-	
+"title": "Winners Selection", "description": "Lucky winners get selected every week end "
+}, "three": {
+
+"title": "Get Your Gift", "description": "The redemption code will be sent via email to the winners"
+}
+
+}
+
+}, "about": {
+
+"title": "How to Apply For The Giveaway?", "description": "It will not take you more than some few minutes to get a chance to earn Coc gems to improve your village and your army faster and become the strongest member of your clan and to get your favorite Clash of Clans skins, all you have to do is to fill out your information, complete a few simple tasks, and then wait to receive the notification containing the result on your email."
+}, "steps": {
+
+"one": {
+"title": "Step One: Fill Your Informations", "description": "Add your name and your personal email"
+}, "two": {
+
+"title": "Step Two: Wait For The Selection", "description": "We select 10 winners everyweek, you might be one of them"
+}, "three": {
+
+"title": "Step Three: Get You Redemption Code", "description": "Winners will recieve and email to get their gift"
+}
+
+}
+
+}, "footer": {
+
+"copyrights": {
+"one": "Copyright", "two": "All Right Reserved"
+}, "home": "Home", "terms": "Terms of Service", "policy": "Privacy Policy"
+
+}, "other": {
+
+"title": {
+"agreement": "I Agree To Terms and Conditions of the Giveaway"
+}, "cta": {
+
+"selectgift": "Select Your Gift"
+}, "nav": "How to use ?"
+
+}, "errors": {
+
+"gems": "Please Select An Option", "devices": "", "input": {
+
+"name": "• Name is Required", "shortname": "• Too Short Name", "terms": "• Accept Terms", "device": "• Select Your Device"
+}, "email": {
+
+"required": "• Email is Required", "invalid": "• Enter a valid email"
+}, "verification": "Please finish the tasks to move on"
+
+}, "opengraph": {
+
+"title": "FREE GEMS", "alt": "coc diamonds"
+}, "keywords": {
+
+"one": "Clash of Clans Gems", "two":"Coc Gems", "three":"Clash of Clans Giveaway", "four":"How to Get Clash of Clans Gems", "five":"Free Clash of Clans Gems", "six":"full elixir storage"
+}
+
+}
