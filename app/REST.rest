@@ -1,9 +1,9 @@
-PATCH http://localhost:3000/api/lang/66f6dcafe5f31fb8ca8d84f0
+PATCH http://localhost:3000/api/lang/66f7054eac860e09ed465173
 Content-Type: application/json
 
-
+[
 {
-"id": "66f6dcafe5f31fb8ca8d84f0", "lang": "en", "title": "Clash Of Clans Gems Giveaway", "description": "You can now win an unlimited amount of Clash of Clans Gems to purchase resources and fill up your elixir storage and gold storage to the max. All you need to do is to fill the survey to receive a Clash of Clans gems code and buy all the skins you like from the store. Fill up your main village storages, upgrade your village and army to become the strongest in your clan and the strongest in clan wars.", "buttons": {
+"id": "66f7054eac860e09ed465173", "lang": "en", "title": "Clash Of Clans Gems Giveaway", "description": "You can now win an unlimited amount of Clash of Clans Gems to purchase resources and fill up your elixir storage and gold storage to the max. All you need to do is to fill the survey to receive a Clash of Clans gems code and buy all the skins you like from the store. Fill up your main village storages, upgrade your village and army to become the strongest in your clan and the strongest in clan wars.", "buttons": {
 
 "next": "Next", "back": "Back", "submit": "Submit"
 }, "labels": {
@@ -97,4 +97,4 @@ Content-Type: application/json
 "one": "Clash of Clans Gems", "two":"Coc Gems", "three":"Clash of Clans Giveaway", "four":"How to Get Clash of Clans Gems", "five":"Free Clash of Clans Gems", "six":"full elixir storage"
 }
 
-}
+}]
