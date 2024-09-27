@@ -12,7 +12,7 @@ export const Skroll = forwardRef(function Hea(
   ref
 ) {
   const scroll = () => {
-    console.log("hello");
+    //console.log("hello");
     scrolToRef.current.scrollIntoView({
       behavior: "smooth",
       //block: "end",

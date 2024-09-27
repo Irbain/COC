@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { getLangs } from "./components/_server/GetLangs";
 import { Analytics } from "@vercel/analytics/react";
 
 // Font files can be colocated inside of `app`
@@ -48,20 +47,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// export const generateStaticParams = () => {
-//   // dynamic is above
-//   const paths = [
-//     { lang: "en" },
-//     { lang: "ru" },
-//     { lang: "ar" },
-//     { lang: "uz" },
-//   ];
-
-//   return paths.map((path) => ({
-//     params: path,
-//   }));
-// };
-
 export default async function RootLayout({
   children,
   params,
@@ -79,6 +64,7 @@ export default async function RootLayout({
   // } else {
   //   console.log("Rendering on the client with lang:", langValue);
   // }
+
   return (
     <html lang={langValue}>
       <body className={myFont.className}>

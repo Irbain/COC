@@ -120,10 +120,16 @@ export default function Home({ currentLang }: HomeProps) {
   const { langs, setLangs, getLang } = useLangStore();
 
   useEffect(() => {
+    // Directly set the `lang` attribute of the HTML tag
+    document.documentElement.lang = currentLang || "en"; // Default to 'en' if no lang provided
+  }, []); // The effect will run every time the `lang` prop changes
+
+  useEffect(() => {
     //zuztand
     const fetchLang = async () => {
       try {
         const data = await getLang(currentLang);
+
         // console.log("zustand:" + JSON.stringify(data)); //[{"id":"656f462e4cb0e05cde00392d"
         // console.log("zustand:" + JSON.stringify(data[0])); //{"id":"656f462e4cb0e05cde00392d"
         setAllData(data[0]);
@@ -448,7 +454,7 @@ export default function Home({ currentLang }: HomeProps) {
                 <FormStep
                   stepName="email"
                   onSubmit={() => {
-                    console.log("Step2");
+                    // console.log("Step2");
                   }}
                   validationSchema={yup.object({
                     email: yup
