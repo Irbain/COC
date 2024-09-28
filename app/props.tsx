@@ -4,6 +4,7 @@ export interface props {
   amount: any;
   quality: any;
   className: string;
+  currentLang: string;
 }
 
 export interface dataObject {

@@ -13,6 +13,7 @@ import { useRef, forwardRef, useState, useEffect } from "react";
 import Skroll from "../Scroll";
 import Verification from "../verification";
 import { useLangStore } from "@/app/utils/langStore";
+import { cn } from "@/app/utils/cn";
 
 interface HomeProps {
   currentLang: string;
@@ -277,6 +278,7 @@ export default function Home({ currentLang }: HomeProps) {
                           img="/pile_of_gems.png"
                           className=" peer-checked:bg-gold"
                           quality={50}
+                          currentLang={currentLang}
                         />
                       </label>
 
@@ -293,6 +295,7 @@ export default function Home({ currentLang }: HomeProps) {
                           img="/sack_of_gems.png"
                           className="peer-checked:bg-gold"
                           quality={50}
+                          currentLang={currentLang}
                         />
                       </label>
 
@@ -312,6 +315,7 @@ export default function Home({ currentLang }: HomeProps) {
                           img="/box_of_gems.png"
                           className="peer-checked:bg-gold"
                           quality={50}
+                          currentLang={currentLang}
                         />
                       </label>
                     </section>
@@ -505,7 +509,14 @@ export default function Home({ currentLang }: HomeProps) {
   );
 }
 
-export function GemCard({ amount, text, img, quality, className }: props) {
+export function GemCard({
+  amount,
+  text,
+  img,
+  quality,
+  className,
+  currentLang,
+}: props) {
   return (
     <div
       className={`
@@ -535,25 +546,26 @@ export function GemCard({ amount, text, img, quality, className }: props) {
     >
       {/* shadow-[inset_0_2px_0px_#00000060] */}
       <h3
-        className="
-        drop-shadow-one
-         text-[0.8rem]
-        text_shadow
-       text-[#70BC20]
-       
-       
-       xs:text-[0.7rem]
-       sm:text-[0.8rem]
-       md:text-[1.2rem]
-       lg:text-[1.4rem]
-       "
+        className={cn(
+          "drop-shadow-one",
+          "text-[0.8rem]",
+          "text_shadow",
+          "text-[#70BC20]",
+
+          {
+            "xs:text-[0.4rem] sm:text-[0.5rem] md:text-[0.7rem] lg:text-[0.9rem]":
+              currentLang == "ru",
+            "xs:text-[0.7rem] sm:text-[0.7rem] md:text-[1rem] lg:text-[1.2rem]":
+              currentLang !== "ru",
+          }
+        )}
       >
         {text}
       </h3>
       <div className="flex text-white">
         <Image
           className="pointer-events-none drop-shadow-[0_1.8px_0px_#303030] w-[20px] sm:w-[15px] h-auto"
-          alt=""
+          alt="coc diamond"
           src="/coc_gem_logo.png"
           height="20"
           width="30"
@@ -564,10 +576,10 @@ export function GemCard({ amount, text, img, quality, className }: props) {
         <div
           className="drop-shadow-one
           
-        xs:text-[0.7rem]
-        sm:text-[0.8rem]
-        md:text-[1.2rem]
-        lg:text-[1.4rem]
+       xs:text-[0.7rem]
+       sm:text-[0.7rem]
+       md:text-[1rem]
+       lg:text-[1.2rem]
         "
         >
           {amount}
@@ -576,7 +588,7 @@ export function GemCard({ amount, text, img, quality, className }: props) {
 
       <Image
         className="pointer-events-none"
-        alt=""
+        alt={text}
         src={img}
         height={90}
         width={90}

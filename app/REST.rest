@@ -1,100 +1,70 @@
-PATCH http://localhost:3000/api/lang/66f7054eac860e09ed465173
+GET http://localhost:3000/api/lang/
 Content-Type: application/json
 
-[
-{
-"id": "66f7054eac860e09ed465173", "lang": "en", "title": "Clash Of Clans Gems Giveaway", "description": "You can now win an unlimited amount of Clash of Clans Gems to purchase resources and fill up your elixir storage and gold storage to the max. All you need to do is to fill the survey to receive a Clash of Clans gems code and buy all the skins you like from the store. Fill up your main village storages, upgrade your village and army to become the strongest in your clan and the strongest in clan wars.", "buttons": {
+{ "id": "66f6dcafe5f31fb8ca8d84f1", "lang": "en", "title": "Clash Of Clans Gems Giveaway", "description": "You can now win an unlimited amount of Clash of Clans Gems to purchase resources and fill up your elixir storage and gold storage to the max. All you need to do is to fill the survey to receive a Clash of Clans gems code and buy all the skins you like from the store. Fill up your main village storages, upgrade your village and army to become the strongest in your clan and the strongest in clan wars.", "buttons": {
 
-"next": "Next", "back": "Back", "submit": "Submit"
-}, "labels": {
+"next": "Next", "back": "Back", "submit": "Submit" }, "labels": {
 
-"name": "Name", "username": "Username", "device": "Device", "email": "Email Address", "wait": "Please Wait", "emailNotice": "Note: You will recieve your gift on your email"
-}, "h1": {
+"name": "Name", "username": "Username", "device": "Device", "email": "Email Address", "wait": "Please Wait", "emailNotice": "Note: You will recieve your gift on your email" }, "h1": {
 
-"one": "GEMS GIVEAWAY", "two": "Second Empty"
-}, "radio": {
+"one": "GEMS GIVEAWAY", "two": "Second Empty" }, "radio": {
 
-"device": {
-"android": "Android", "ios": "iOS", "other": "Other"
-}, "card": {
+"device": { "android": "Android", "ios": "iOS", "other": "Other" }, "card": {
 
-"first": {
-"title": "Pile of Gems", "amount": "1200", "image": "path", "alt": "Pile of Gems"
-}, "second": {
+"first": { "title": "Pile of Gems", "amount": "1200", "image": "path", "alt": "Pile of Gems" }, "second": {
 
-"title": "Sack of Gems", "amount": "2500", "image": "path", "alt": "Sack of Gems"
-}, "third": {
+"title": "Sack of Gems", "amount": "2500", "image": "path", "alt": "Sack of Gems" }, "third": {
 
-"title": "Box of Gems", "amount": "6500", "image": "path", "alt": "Box of Gems"
-}
+"title": "Box of Gems", "amount": "6500", "image": "path", "alt": "Box of Gems" }
 
 }
 
 }, "section": {
 
-"howTo": {
-"title": "How to Get Clash of Clans Gems ?", "description": "If you are looking to get some Clash of Clans gems, there are several ways to do that for free, using these methods on this article. /nBut if today is your lucky day, you will get an extra way to end up one of the winners of the green diamonds that everyone is looking for, many players have gotten lucky already and there are still unlimited chances for others in the future. nThe more players who participate in our survey, the more opportunities there will be to earn unlimited gems, and by sharing the giveaway with your friend you will be able to increase your chance to be a winner.", "step": {
+"howTo": { "title": "How to Get Clash of Clans Gems ?", "description": "If you are looking to get some Clash of Clans gems, there are several ways to do that for free, using these methods on this article. /nBut if today is your lucky day, you will get an extra way to end up one of the winners of the green diamonds that everyone is looking for, many players have gotten lucky already and there are still unlimited chances for others in the future. nThe more players who participate in our survey, the more opportunities there will be to earn unlimited gems, and by sharing the giveaway with your friend you will be able to increase your chance to be a winner.", "step": {
 
-"one": {
-"title": "Apply to The Giveway", "description": "Fill the form above for applying to weekly giveaway"
-}, "two": {
+"one": { "title": "Apply to The Giveway", "description": "Fill the form above for applying to weekly giveaway" }, "two": {
 
-"title": "Winners Selection", "description": "Lucky winners get selected every week end "
-}, "three": {
+"title": "Winners Selection", "description": "Lucky winners get selected every week end " }, "three": {
 
-"title": "Get Your Gift", "description": "The redemption code will be sent via email to the winners"
-}
+"title": "Get Your Gift", "description": "The redemption code will be sent via email to the winners" }
 
 }
 
 }, "about": {
 
-"title": "How to Apply For The Giveaway?", "description": "It will not take you more than some few minutes to get a chance to earn Coc gems to improve your village and your army faster and become the strongest member of your clan and to get your favorite Clash of Clans skins, all you have to do is to fill out your information, complete a few simple tasks, and then wait to receive the notification containing the result on your email."
-}, "steps": {
+"title": "How to Apply For The Giveaway?", "description": "It will not take you more than some few minutes to get a chance to earn Coc gems to improve your village and your army faster and become the strongest member of your clan and to get your favorite Clash of Clans skins, all you have to do is to fill out your information, complete a few simple tasks, and then wait to receive the notification containing the result on your email." }, "steps": {
 
-"one": {
-"title": "Step One: Fill Your Informations", "description": "Add your name and your personal email"
-}, "two": {
+"one": { "title": "Step One: Fill Your Informations", "description": "Add your name and your personal email" }, "two": {
 
-"title": "Step Two: Wait For The Selection", "description": "We select 10 winners everyweek, you might be one of them"
-}, "three": {
+"title": "Step Two: Wait For The Selection", "description": "We select 10 winners everyweek, you might be one of them" }, "three": {
 
-"title": "Step Three: Get You Redemption Code", "description": "Winners will recieve and email to get their gift"
-}
+"title": "Step Three: Get You Redemption Code", "description": "Winners will recieve and email to get their gift" }
 
 }
 
 }, "footer": {
 
-"copyrights": {
-"one": "Copyright", "two": "All Right Reserved"
-}, "home": "Home", "terms": "Terms of Service", "policy": "Privacy Policy"
+"copyrights": { "one": "Copyright", "two": "All Right Reserved" }, "home": "Home", "terms": "Terms of Service", "policy": "Privacy Policy"
 
 }, "other": {
 
-"title": {
-"agreement": "I Agree To Terms and Conditions of the Giveaway"
-}, "cta": {
+"title": { "agreement": "I Agree To Terms and Conditions of the Giveaway" }, "cta": {
 
-"selectgift": "Select Your Gift"
-}, "nav": "How to use ?"
+"selectgift": "Select Your Gift" }, "nav": "How to use ?"
 
 }, "errors": {
 
 "gems": "Please Select An Option", "devices": "", "input": {
 
-"name": "• Name is Required", "shortname": "• Too Short Name", "terms": "• Accept Terms", "device": "• Select Your Device"
-}, "email": {
+"name": "• Name is Required", "shortname": "• Too Short Name", "terms": "• Accept Terms", "device": "• Select Your Device" }, "email": {
 
-"required": "• Email is Required", "invalid": "• Enter a valid email"
-}, "verification": "Please finish the tasks to move on"
+"required": "• Email is Required", "invalid": "• Enter a valid email" }, "verification": "Please finish the tasks to move on"
 
 }, "opengraph": {
 
-"title": "FREE GEMS", "alt": "coc diamonds"
-}, "keywords": {
+"title": "FREE GEMS", "alt": "coc diamonds" }, "keywords": {
 
-"one": "Clash of Clans Gems", "two":"Coc Gems", "three":"Clash of Clans Giveaway", "four":"How to Get Clash of Clans Gems", "five":"Free Clash of Clans Gems", "six":"full elixir storage"
+"one": "Clash of Clans Gems", "two":"Coc Gems", "three":"Clash of Clans Giveaway", "four":"How to Get Clash of Clans Gems", "five":"Free Clash of Clans Gems", "six":"full elixir storage" }
+
 }
-
-}]

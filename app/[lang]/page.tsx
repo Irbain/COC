@@ -23,8 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   //   title: "Not Found",
   //   description: "The page is not found",
   // };
-  const data = await getLang(params.lang);
-
+  const data = await getLang(params.lang); // return: en || lang
   if (!data || !data[0]) {
     console.error(`Data is missing or empty: ${data}`); // Add this line
     return {
@@ -48,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data[0].description,
     //keywords: Object.values(data[0].keywords), // must be mapped
     alternates: {
-      canonical: `/en`,
+      canonical: `/${params.lang}`,
       languages: {
         en: `/en`,
         ar: `/ar`,
