@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+
 # testing
 /coverage
 
@@ -44,3 +45,5 @@ node_modules
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+
+
