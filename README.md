@@ -142,7 +142,7 @@
   }
   }
 
-  ************\_************RU************\_\_************
+  ****\*\*\*\*****\_****\*\*\*\*****RU****\*\*\*\*****\_\_****\*\*\*\*****
 
   {
   "id": "657898d0966125b08f1ca5e8",
@@ -396,3 +396,8 @@ After adding a language it must be added on the following places :
 // }
 
 TODO:
+
+THE URLS SHOULD CHANGE ON:
+.env
+sitemap.xml
+OAUTH
