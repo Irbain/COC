@@ -4,7 +4,7 @@ const URL = process.env.NEXT_PUBLIC_URL;
 
 export const getLang = async (lang: string) => {
   const res = await fetch(
-    `${URL}api/lang/${lang}`
+    `${URL}/api/lang/${lang}`
     // , {
     // cache: "no-store",
     // }
