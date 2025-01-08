@@ -10,8 +10,8 @@ const myFont = localFont({
 });
 
 const url = process.env.NEXT_PUBLIC_URL;
-const google = "jmX4nMbvgTpqETiEDy2CYBcRRqJItwlvtdDQmhNLWvg";
-const yandex = "144555efcda11f0f";
+const google = "dtuVZeLzlFtowr7ihIBAVBEt8H4A5rmT3pxypPDT-QA";
+const yandex = "144555efcda11f0f"; //TODO
 
 if (!url) {
   throw new Error("NEXT_PUBLIC_URL is not defined.");

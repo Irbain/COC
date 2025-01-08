@@ -8,7 +8,6 @@ import {
 import React, { useState } from "react";
 import FormNavigation from "./FormNavigation";
 // import { Progress } from "./../input/page";
-import { FaRegCheckCircle, FaCheckCircle } from "react-icons/fa";
 
 interface Props extends FormikConfig<FormikValues> {
   children: React.ReactNode;
