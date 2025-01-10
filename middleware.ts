@@ -18,7 +18,7 @@ export function middleware(request: NextRequest) {
       );
       response.headers.set(
         "Access-Control-Allow-Headers",
-        "Content-Type, Authorization"
+        "Content-Type, Authorization, Accept"
       );
       return response;
     }
@@ -31,14 +31,20 @@ export function middleware(request: NextRequest) {
     );
     response.headers.set(
       "Access-Control-Allow-Headers",
-      "Content-Type, Authorization"
+      "Content-Type, Authorization, Accept"
     );
 
     return response;
   }
 
+  console.error(`CORS error: origin ${origin} is not allowed`);
   // Reject requests from disallowed origins
   return new NextResponse("CORS policy does not allow this origin.", {
     status: 403,
   });
 }
+
+// Middleware configuration
+export const config = {
+  matcher: "/:path*", // Catch-all for all paths
+};
