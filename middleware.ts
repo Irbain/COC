@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // Define the allowed origins
-const allowedOrigins = ["https://clash-gems.com"];
+const allowedOrigins = ["https://www.clash-gems.com"];
 
 export function middleware(request: NextRequest) {
   const origin = request.headers.get("origin");
