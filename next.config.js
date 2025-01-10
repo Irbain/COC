@@ -7,6 +7,29 @@ const nextConfig = {
   // resolve: {
   //   extensions: [".ts", ".tsx"],
   // },
+
+  async headers() {
+    return [
+      {
+        // Match all API routes
+        source: "/api/:path*",
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://www.clash-gems.com",
+          },
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET, POST, PUT, DELETE, OPTIONS",
+          },
+          {
+            key: "Access-Control-Allow-Headers",
+            value: "Content-Type, Authorization",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
