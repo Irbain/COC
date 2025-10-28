@@ -54,6 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ru: `/ru`,
         uz: `/uz`,
         fr: `/fr`,
+        es: `/es`,
       },
     },
   };

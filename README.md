@@ -142,7 +142,7 @@
   }
   }
 
-  ****\*\*\*\*****\_****\*\*\*\*****RU****\*\*\*\*****\_\_****\*\*\*\*****
+  \***\*\*\*\*\*\*\***\_\***\*\*\*\*\*\*\***RU\***\*\*\*\*\*\*\***\_\_\***\*\*\*\*\*\*\***
 
   {
   "id": "657898d0966125b08f1ca5e8",
@@ -280,11 +280,11 @@
 
 ## Adding Data:
 
-- Update the Prisma Schema
 - to add first update on app/api/lang/route.js POST
 - copy id generated
 - app/api/lang/[id]/route.js PATCH function
 
+layout and [lang] and langStore add new languae
 for update
 
 - update on app/api/lang/[id]/route.js PATCH function

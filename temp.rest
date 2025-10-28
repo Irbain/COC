@@ -1,0 +1,136 @@
+PATCH http://localhost:3000/api/lang/690097c7a8aab6661bbf0660
+Content-Type: application/json
+
+{
+  "id": "690097c7a8aab6661bbf0660",
+  "lang": "es",
+  "title": "Sorteo de Gemas de Clash of Clans",
+  "description": "Para editar más tarde",
+  "buttons": {
+    "next": "Siguiente",
+    "back": "Atrás",
+    "submit": "Enviar"
+  },
+  "labels": {
+    "name": "Nombre",
+    "username": "Nombre de usuario",
+    "device": "Dispositivo",
+    "email": "Correo electrónico",
+    "wait": "Por favor espera",
+    "emailNotice": "Nota: Recibirás tu regalo en tu correo electrónico"
+  },
+  "h1": {
+    "one": "SORTEO DE GEMAS",
+    "two": "Segundo vacío"
+  },
+  "radio": {
+    "device": {
+      "android": "Android",
+      "ios": "iOS",
+      "other": "Otro"
+    },
+    "card": {
+      "first": {
+        "title": "Montón de Gemas",
+        "amount": "1200",
+        "image": "path",
+        "alt": "Montón de Gemas"
+      },
+      "second": {
+        "title": "Saco de Gemas",
+        "amount": "2500",
+        "image": "path",
+        "alt": "Saco de Gemas"
+      },
+      "third": {
+        "title": "Caja de Gemas",
+        "amount": "6500",
+        "image": "path",
+        "alt": "Caja de Gemas"
+      }
+    }
+  },
+  "section": {
+    "howTo": {
+      "title": "¿Cómo conseguir gemas de Clash of Clans?",
+      "description": "Si estás buscando obtener gemas de Clash of Clans, hay varias maneras de hacerlo gratis, utilizando los métodos mencionados en este artículo. \nPero si hoy es tu día de suerte, tendrás una oportunidad adicional para ser uno de los ganadores de los diamantes verdes que todos buscan. Muchos jugadores ya han tenido suerte y todavía hay oportunidades ilimitadas para otros en el futuro.\nCuantos más jugadores participen en nuestra encuesta, más oportunidades habrá de ganar gemas ilimitadas, y al compartir el sorteo con tu amigo podrás aumentar tus posibilidades de ser un ganador.",
+      "step": {
+        "one": {
+          "title": "Envía tu información",
+          "description": "Agrega tu nombre y tu correo electrónico personal"
+        },
+        "two": {
+          "title": "Selección de ganadores",
+          "description": "Los ganadores afortunados son seleccionados cada semana; podrías ser uno de ellos"
+        },
+        "three": {
+          "title": "Recibe tu regalo",
+          "description": "El código de canje será enviado por correo electrónico"
+        }
+      }
+    },
+    "about": {
+      "title": "¿Cómo participar en el sorteo?",
+      "description": "No te tomará más de unos minutos tener la oportunidad de ganar gemas de CoC para mejorar tu aldea y tu ejército más rápido, convertirte en el miembro más fuerte de tu clan y obtener tus aspectos favoritos de Clash of Clans. Todo lo que tienes que hacer es completar tu información, realizar algunas tareas simples y luego esperar a recibir la notificación con el resultado en tu correo electrónico."
+    },
+    "steps": {
+      "one": {
+        "title": "Paso Uno: Completa tu información",
+        "description": "Agrega tu nombre y tu correo electrónico personal"
+      },
+      "two": {
+        "title": "Paso Dos: Espera la selección",
+        "description": "Seleccionamos 10 ganadores cada semana; podrías ser uno de ellos"
+      },
+      "three": {
+        "title": "Paso Tres: Obtén tu código de canje",
+        "description": "Los ganadores recibirán un correo electrónico para obtener su regalo"
+      }
+    }
+  },
+  "footer": {
+    "copyrights": {
+      "one": "Derechos de autor",
+      "two": "Todos los derechos reservados"
+    },
+    "home": "Inicio",
+    "terms": "Términos de servicio",
+    "policy": "Política de privacidad"
+  },
+  "other": {
+    "title": {
+      "agreement": "Acepto los términos y condiciones del sorteo"
+    },
+    "cta": {
+      "selectgift": "Selecciona tu regalo"
+    },
+    "nav": "¿Cómo usar?"
+  },
+  "errors": {
+    "gems": "Por favor selecciona una opción",
+    "devices": "",
+    "input": {
+      "name": "• El nombre es obligatorio",
+      "shortname": "• Nombre demasiado corto",
+      "terms": "• Acepta los términos",
+      "device": "• Selecciona tu dispositivo"
+    },
+    "email": {
+      "required": "• El correo electrónico es obligatorio",
+      "invalid": "• Introduce un correo electrónico válido"
+    },
+    "verification": "Por favor completa las tareas para continuar"
+  },
+  "opengraph": {
+    "title": "GEMAS GRATIS",
+    "alt": "diamantes coc"
+  },
+  "keywords": {
+    "one": "Gemas de Clash of Clans",
+    "two": "Gemas Coc",
+    "three": "Sorteo de Clash of Clans",
+    "four": "Cómo conseguir gemas de Clash of Clans",
+    "five": "Gemas gratis de Clash of Clans",
+    "six": "almacén de elixir lleno"
+  }
+}
